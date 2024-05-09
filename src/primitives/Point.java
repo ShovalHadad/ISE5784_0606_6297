@@ -1,46 +1,66 @@
 package primitives;
 
-import static primitives.Util.isZero;
-
 /**
- *
+ * Point class
  */
 public class Point {
     public static final Point ZERO = new Point(Double3.ZERO);
 
     final Double3 xyz;
 
+    /**
+     * constructor that gets 3 numbers and set the point
+     * @param x
+     * @param y
+     * @param z
+     */
     public Point(double x, double y, double z) {
         xyz = new Double3(x, y, z);
     }
 
-
+    /**
+     * constructor that get a Double3 type and set the point
+     * @param xyz
+     */
     public Point(Double3 xyz) {
         this.xyz = xyz;
     }
 
-    public double distanceSquared(Point p1) {
-        Point p3 = new Point(xyz.subtract(p1.xyz));
-        Double3 DistanceAsPoint = p3.xyz.product(p3.xyz);
-        return (DistanceAsPoint.d1 + DistanceAsPoint.d2 + DistanceAsPoint.d3);
-        //return 14;
+    /**
+     * Calculates the distance squared -> |ba|^2 = (a1-b1)+(a2-b2)+(a3-b3)
+     * @param point
+     * @return double
+     */
+    public double distanceSquared(Point point) {
+        return ((this.xyz.d1 - point.xyz.d1) + (this.xyz.d2 - point.xyz.d2) + (this.xyz.d3 - point.xyz.d3));
     }
 
-
-    public double distance(Point p1) {
-        return Math.sqrt(distanceSquared(p1));
+    /**
+     * Calculates the distance between 2 points
+     * @param point
+     * @return double
+     */
+    public double distance(Point point) {
+        return Math.sqrt(distanceSquared(point));
     }
 
-
-    // Assuming existing correct implementation of constructor and xyz field
-    public Vector subtract(Point other) {
-        Double3 result = this.xyz.subtract(other.xyz);
-        if (result.equals(Double3.ZERO)) {
+    /**
+     * Calculates the vector -> ab = (b1-a1, b2-a2, b3-a3)
+     * @param point
+     * @return vector
+     */
+    public Vector subtract(Point point) {
+        if ((this.xyz.subtract(point.xyz)).equals(Double3.ZERO)) {
             throw new IllegalArgumentException("Resulting vector cannot be zero");
         }
-        return new Vector(result);
+        return new Vector(this.xyz.subtract(point.xyz));
     }
 
+    /**
+     * add a point to a vector
+     * @param vector
+     * @return point
+     */
     public Point add(Vector vector) {
         return new Point(this.xyz.add(vector.xyz));
     }
@@ -55,6 +75,6 @@ public class Point {
 
     @Override
     public String toString() {
-        return "(" + xyz.d1 + "," + xyz.d2 + "," + xyz.d3 + ")";
+        return "\nPoint " + xyz + "= (" + xyz.d1 + ", " + xyz.d2 + ", " + xyz.d3 + ")";
     }
 }
