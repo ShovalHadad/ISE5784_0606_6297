@@ -1,21 +1,26 @@
 package primitives;
 
 public class Vector extends Point{
-    public Vector(double x, double y, double z){
-        if (x == 0 && y == 0 && z == 0)
-            throw new IllegalArgumentException("can not be zero vector (0,0,0)");
-        super(x, y, z);
+    public Vector(double x, double y, double z) {
+        if (x == 0 && y == 0 && z == 0) {
+            throw new IllegalArgumentException("Cannot be zero vector (0,0,0)");
+        }
+        super(x, y, z); // This must be the first statement
+
     }
 
     public Vector(Double3 double3) {
-        if (double3 == Double3.ZERO)
-            throw new IllegalArgumentException("can not be zero vector (0,0,0)");
+        if (double3.equals(Double3.ZERO)) {
+            throw new IllegalArgumentException("Cannot be zero vector (0,0,0)");
+        }
         super(double3);
+
     }
+
 
     /**
      * the function multiplied the vector by number (scalar)
-     * @param scalar
+     * @param
      * @return vector
      */
     public Vector scale(double scalar){
@@ -55,4 +60,16 @@ public class Vector extends Point{
         double length = length();
         return new Vector(((xyz.d1)/length),((xyz.d2)/length),((xyz.d3)/length));
     }
+
+
+        // Assuming existing correct implementation of constructors
+        public Vector add(Vector other) {
+            return new Vector(this.xyz.add(other.xyz));
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (!super.equals(obj)) return false;
+            return obj instanceof Vector;
+        }
 }

@@ -14,60 +14,47 @@ public class Point {
         xyz = new Double3(x, y, z);
     }
 
-    //public boolean equals(Point point) {
-        //if (this == point) return true;
-        //return xyz.equals(point.xyz);
-    //}
-    /**
-     *
-     * @param xyz
-     */
+
     public Point(Double3 xyz) {
         this.xyz = xyz;
     }
 
-    /**
-     *
-     * @param p1
-     * @return
-     */
-    public Vector subtract(Point p1){
-        Point point = new Point(xyz.subtract(p1.xyz));
-        if (point.equals(ZERO))
-            throw new IllegalArgumentException("can not be zero");
-        return new Vector(point.xyz);
-    }
-
-    /**
-     *
-     * @param v1
-     * @return
-     */
-    public Point add(Vector v1) {
-        Point point = new Point(xyz.add(v1.xyz));
-        if (point.equals(ZERO))
-            throw new IllegalArgumentException("can not be zero");
-        return point;
-    }
-
-    /**
-     * x^2 + y^2 + z^2
-     * @param p1
-     * @return x^2 + y^2 + z^2
-     */
     public double distanceSquared(Point p1) {
-        Point p3 =new Point(xyz.subtract(p1.xyz));
+        Point p3 = new Point(xyz.subtract(p1.xyz));
         Double3 DistanceAsPoint = p3.xyz.product(p3.xyz);
-        return  (DistanceAsPoint.d1 + DistanceAsPoint.d2 + DistanceAsPoint.d3);
+        return (DistanceAsPoint.d1 + DistanceAsPoint.d2 + DistanceAsPoint.d3);
         //return 14;
     }
 
-    /**
-     *
-     * @param p1
-     * @return
-     */
+
     public double distance(Point p1) {
         return Math.sqrt(distanceSquared(p1));
+    }
+
+
+    // Assuming existing correct implementation of constructor and xyz field
+    public Vector subtract(Point other) {
+        Double3 result = this.xyz.subtract(other.xyz);
+        if (result.equals(Double3.ZERO)) {
+            throw new IllegalArgumentException("Resulting vector cannot be zero");
+        }
+        return new Vector(result);
+    }
+
+    public Point add(Vector vector) {
+        return new Point(this.xyz.add(vector.xyz));
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Point point = (Point) obj;
+        return this.xyz.equals(point.xyz);
+    }
+
+    @Override
+    public String toString() {
+        return "(" + xyz.d1 + "," + xyz.d2 + "," + xyz.d3 + ")";
     }
 }

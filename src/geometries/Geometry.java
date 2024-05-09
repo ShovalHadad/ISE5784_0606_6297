@@ -1,7 +1,12 @@
 package geometries;
 
-import primitives.*;
+import primitives.Point;
+import primitives.Vector;
 
+/**
+ * Interface for geometric objects.
+ * Provides method to get the normal to the surface at a specific point.
+ */
 public interface Geometry {
-    public Vector getNormal(Point point);
+    Vector getNormal(Point point);
 }
