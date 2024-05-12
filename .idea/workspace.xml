@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5b2b54a-d520-461a-a30d-1ed7389f1e86" name="Changes" comment="eqales and add ray">
-      <change afterPath="$PROJECT_DIR$/src/geometries/Cylinder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/geometries/RadialGeometry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/geometries/Sphere.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/geometries/Tube.java" afterDir="false" />
+    <list default="true" id="f5b2b54a-d520-461a-a30d-1ed7389f1e86" name="Changes" comment="PR01">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometries/Geometry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Geometry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometries/Plane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Plane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometries/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/primitives/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/primitives/Ray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Ray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/primitives/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Vector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +22,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="owner &lt;oagfin@g.jct.ac.il&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -112,6 +107,36 @@
       <option name="presentableId" value="Default" />
       <updated>1714998807114</updated>
     </task>
+    <task id="LOCAL‎-00001" summary="PR01">
+      <option name="closed" value="true" />
+      <created>1715543115349</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL‎-00001" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1715543115350</updated>
+    </task>
+    <task id="LOCAL‎-00002" summary="PR01">
+      <option name="closed" value="true" />
+      <created>1715543247736</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL‎-00002" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1715543247736</updated>
+    </task>
+    <task id="LOCAL‎-00003" summary="PR01">
+      <option name="closed" value="true" />
+      <created>1715543299967</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL‎-00003" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1715543299967</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="eqales and add ray" />
+    <MESSAGE value="PR01" />
+    <option name="LAST_COMMIT_MESSAGE" value="PR01" />
   </component>
 </project>
