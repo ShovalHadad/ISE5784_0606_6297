@@ -27,7 +27,7 @@ public class Point {
     }
 
     /**
-     * Calculates the distance squared -> |ba|^2 = (a1-b1)+(a2-b2)+(a3-b3)
+     * Calculates the distance squared -> |ba|^2 = (a1-b1)^2+(a2-b2)^2+(a3-b3)^2
      * @param point
      * @return double
      */

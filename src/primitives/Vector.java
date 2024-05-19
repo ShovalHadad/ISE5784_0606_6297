@@ -90,8 +90,6 @@ public class Vector extends Point {
      * @return Vector
      */
     public Vector normalize() {
-        if(getSum() == 1)
-            return new Vector(xyz);
         double length = length();
         return new Vector(((xyz.d1) / length), ((xyz.d2) / length), ((xyz.d3) / length));
     }

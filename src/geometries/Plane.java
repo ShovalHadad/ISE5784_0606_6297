@@ -9,6 +9,14 @@ import primitives.*;
     private final Vector normal;
 
     /**
+     * returns the point q of the plane
+     * @return point q
+     */
+    public Point getQ(){
+        return q;
+    }
+
+    /**
      * Constructs a plane with three points lying on it.
      * Calculates the normal to the plane based on the three points.
      * @param p1 First point on the plane.
