@@ -4,15 +4,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import geometries.Polygon;
 import primitives.Point;
 import primitives.Vector;
 
 /**
- * Testing Polygon
- * @author Dan
+ * Unit tests for geometries.Polygon class
  */
-public class PolygonTest {
+public class PolygonTests {
     /**
      * Delta value for accuracy when comparing the numbers of type 'double' in
      * assertEquals
