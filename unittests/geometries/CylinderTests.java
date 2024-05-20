@@ -1,8 +1,10 @@
 package geometries;
 
-import org.junit.jupiter.api.Test;
 import primitives.*;
 
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Unit tests for geometries.Cylinder class
@@ -10,21 +12,24 @@ import primitives.*;
 public class CylinderTests {
 
     /**
-     * Test method for {@link geometries.Cylinder#getNormal(Point)}.
+     * Test method for {@link geometries.Cylinder#getNormal(primitives.Point)}.
      */
     @Test
     public void testGetNormal() {
-//        // ============ Equivalence Partitions Tests ==============
-//        // TC01: Simple test for normal of an infinite cylinder
-//        Vector direction = new Vector(0, 1, 0); // יצירת Vector מנקודת התחלה של הקרן
-//        Ray ray = new Ray(direction, new Point(0, 0, 0)); // יצירת קרן
-//        Cylinder cylinder = new Cylinder(1, ray, 1);
-//        Vector normal = cylinder.getNormal(new Point(1, 0, 0));
-//
-//        // Ensure the normal is of unit length
-//        assertEquals(1, normal.length(), "Cylinder getNormal() wrong normal length");
-//
-//        // Ensure the normal is correct
-//        assertEquals(new Vector(1, 0, 0), normal, "Cylinder getNormal() wrong normal direction");
+        Cylinder c = new Cylinder(5, new Ray( new Vector(0,0,1),new Point(0,0,0 )),5);
+        // ============ Equivalence Partitions Tests ==============
+        // test if the point is on the side (like in tube)
+        assertEquals(c.getNormal(new Point(0,-5,2)),new Vector(0,-1,0),"ERROR: Cylinder.getNormal() does not work correctly(point on the side)");
+        // test if the point is on the top
+        assertEquals(new Vector(0,0,1),c.getNormal(new Point(0,2,5)),"ERROR: Cylinder.getNormal() does not work correctly(point on top)");
+        // test point is on the bottom
+        assertEquals(c.getNormal(new Point(0,2,0)),new Vector(0,0,1),"ERROR: Cylinder.getNormal() does not work correctly(point is on the bottom)");
+
+        // =============== Boundary Values Tests ==================
+        // test if the point is on the edge between the side and the top
+        assertEquals(c.getNormal(new Point(0,5,5)),new Vector(0,0,1), "ERROR: Cylinder.getNormal() does not work correctly");
+        // test point is on the edge between the side and the bottom
+        assertEquals(c.getNormal(new Point(-5,0,0)),new Vector(0,0,1), "ERROR: Cylinder.getNormal() does not work correctly");
     }
 }
+
