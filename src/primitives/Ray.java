@@ -4,8 +4,8 @@ package primitives;
  * Ray class
  */
 public class Ray {
-    public Vector direction;
-    public Point head;
+    final Vector direction;
+    final Point head;
     //constructor
     public Ray(Vector v, Point p) {
         if((v.xyz.d1 + v.xyz.d2 +v.xyz.d3) != 1){
@@ -13,6 +13,15 @@ public class Ray {
         }
         else direction = v;
         head = p;
+    }
+
+    //getters
+    public Point getHead(){
+        return head;
+    }
+
+    public Vector getDirection() {
+        return direction;
     }
 
     @Override

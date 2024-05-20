@@ -9,14 +9,6 @@ import primitives.*;
     private final Vector normal;
 
     /**
-     * returns the point q of the plane
-     * @return point q
-     */
-    public Point getQ(){
-        return q;
-    }
-
-    /**
      * Constructs a plane with three points lying on it.
      * Calculates the normal to the plane based on the three points.
      * @param p1 First point on the plane.
@@ -40,11 +32,6 @@ import primitives.*;
         this.normal = vector.normalize();
     }
 
-    @Override
-    public Vector getNormal(Point point) {
-        return normal;
-    }
-
     /**
      *  returns the normal vector of the span
      * @return vector
@@ -52,4 +39,10 @@ import primitives.*;
     public Vector getNormal(){
         return normal;
     }
+
+    @Override
+    public Vector getNormal(Point point) {
+        return normal;
+    }
+
 }
