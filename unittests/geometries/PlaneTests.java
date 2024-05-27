@@ -38,4 +38,9 @@ public class PlaneTests {
         // Test constructor with collinear points
         assertThrows(IllegalArgumentException.class, () -> new Plane(new Point(1, 1, 1), new Point(2, 2, 2), new Point(3, 3, 3)), "Plane constructor does not throw an exception for collinear points");
     }
+
+    @Test
+    public void testFindIntsersections(){
+
+    }
 }

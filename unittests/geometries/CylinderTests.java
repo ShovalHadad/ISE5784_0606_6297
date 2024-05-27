@@ -31,5 +31,10 @@ public class CylinderTests {
         // test point is on the edge between the side and the bottom
         assertEquals(c.getNormal(new Point(-5,0,0)),new Vector(0,0,1), "ERROR: Cylinder.getNormal() does not work correctly");
     }
+
+    @Test
+    public void testFindIntsersections(){
+
+    }
 }
 

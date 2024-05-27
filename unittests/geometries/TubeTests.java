@@ -27,5 +27,10 @@ public class TubeTests {
         Vector expectedNormal = new Vector(0, 1, 0);
         assertEquals(expectedNormal, tube.getNormal(point), "getNormal() for Tube did not return the expected normal");
     }
+
+    @Test
+    public void testFindIntsersections(){
+
+    }
 }
 

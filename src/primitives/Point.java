@@ -77,4 +77,16 @@ public class Point {
     public String toString() {
         return "\nPoint " + xyz + "= (" + xyz.d1 + ", " + xyz.d2 + ", " + xyz.d3 + ")";
     }
+
+    public double getD1() {
+        return this.xyz.d1;
+    }
+
+    public double getD2() {
+        return this.xyz.d2;
+    }
+    public double getD3() {
+        return this.xyz.d3;
+    }
+
 }

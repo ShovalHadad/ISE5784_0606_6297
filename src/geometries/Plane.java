@@ -1,6 +1,9 @@
 package geometries;
 
 import primitives.*;
+
+import java.util.List;
+
 /**
  * Plan class -> Represents a plane in 3D space.
  */
@@ -43,6 +46,12 @@ import primitives.*;
     @Override
     public Vector getNormal(Point point) {
         return normal;
+    }
+
+    @Override
+    public List<Point> findIntersections(Ray ray) {
+        return null;
+        //return List.of();
     }
 
 }
