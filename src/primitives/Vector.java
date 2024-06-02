@@ -20,13 +20,13 @@ public class Vector extends Point {
 
     /**
      * constructor that get a double3 type and set the vector
-     * @param double3
+     * @param xyz
      */
-    public Vector(Double3 double3) {
-        if (double3.equals(Double3.ZERO)) {
+    public Vector(Double3 xyz) {
+        if (xyz.equals(Double3.ZERO)) {
             throw new IllegalArgumentException("Cannot be zero vector (0,0,0)");
         }
-        super(double3);
+        super(xyz);
 
     }
 
@@ -76,14 +76,15 @@ public class Vector extends Point {
                 ((xyz.d1 * v.xyz.d2) - (xyz.d2 * v.xyz.d1)));
     }
 
-    /**
-     * private function for getting the sum of the vector (to check if normalized)
-     *  x + y + z
-     * @return int
-     */
-    private int getSum(){
-        return (int)(xyz.d1 + xyz.d2 + xyz.d3);
-    }
+//
+//    /**
+//     * private function for getting the sum of the vector (to check if normalized)
+//     *  x + y + z
+//     * @return int
+//     */
+//    private int getSum(){
+//        return (int)(xyz.d1 + xyz.d2 + xyz.d3);
+//    }
 
     /**
      * returns the normalize vector
@@ -91,7 +92,7 @@ public class Vector extends Point {
      */
     public Vector normalize() {
         double length = length();
-        return new Vector(((xyz.d1) / length), ((xyz.d2) / length), ((xyz.d3) / length));
+        return new Vector(xyz.reduce(length));
     }
 
     /**

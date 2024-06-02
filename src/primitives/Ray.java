@@ -13,10 +13,7 @@ public class Ray {
      * @param p point
      */
     public Ray(Vector v, Point p) {
-        if((v.xyz.d1 + v.xyz.d2 +v.xyz.d3) != 1){
-            direction = v.normalize();
-        }
-        else direction = v;
+        direction = v.normalize();
         head = p;
     }
 

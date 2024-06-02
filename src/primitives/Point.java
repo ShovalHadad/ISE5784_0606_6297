@@ -32,7 +32,9 @@ public class Point {
      * @return double
      */
     public double distanceSquared(Point point) {
-        return (((this.xyz.d1 - point.xyz.d1)*(this.xyz.d1 - point.xyz.d1)) + ((this.xyz.d2 - point.xyz.d2)*(this.xyz.d2 - point.xyz.d2)) + ((this.xyz.d3 - point.xyz.d3)*(this.xyz.d3 - point.xyz.d3)));
+        return (((this.xyz.d1 - point.xyz.d1)*(this.xyz.d1 - point.xyz.d1))
+                + ((this.xyz.d2 - point.xyz.d2)*(this.xyz.d2 - point.xyz.d2))
+                + ((this.xyz.d3 - point.xyz.d3)*(this.xyz.d3 - point.xyz.d3)));
     }
 
     /**
