@@ -67,6 +67,30 @@ public class Point {
         return new Point(this.xyz.add(vector.xyz));
     }
 
+    /**
+     * returns the d1
+     * @return double
+     */
+    public double getD1() {
+        return this.xyz.d1;
+    }
+
+    /**
+     * returns the d2
+     * @return double
+     */
+    public double getD2() {
+        return this.xyz.d2;
+    }
+
+    /**
+     * returns the d3
+     * @return double
+     */
+    public double getD3() {
+        return this.xyz.d3;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
@@ -79,16 +103,4 @@ public class Point {
     public String toString() {
         return "\nPoint " + xyz + "= (" + xyz.d1 + ", " + xyz.d2 + ", " + xyz.d3 + ")";
     }
-
-    public double getD1() {
-        return this.xyz.d1;
-    }
-
-    public double getD2() {
-        return this.xyz.d2;
-    }
-    public double getD3() {
-        return this.xyz.d3;
-    }
-
 }
