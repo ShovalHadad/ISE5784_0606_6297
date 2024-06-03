@@ -1,7 +1,5 @@
 package geometries;
-
 import primitives.*;
-
 import java.util.List;
 
 /**
@@ -9,6 +7,7 @@ import java.util.List;
  * Provides method to get the normal to the surface at a specific point.
  */
 public interface Geometry extends Intersectable {
+
     /**
      * return a normal vector from point
      *  this function has to be implemented in the sons of Geometry

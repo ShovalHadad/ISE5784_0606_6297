@@ -1,10 +1,8 @@
 package geometries;
-
 import primitives.*;
-
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
+import java.util.List;
 
 /**
  * Unit tests for geometries.Cylinder class
@@ -46,9 +44,40 @@ public class CylinderTests {
                 "ERROR: Cylinder.getNormal() does not work correctly");
     }
 
+    /**
+     * Test method for {@link geometries.Cylinder#findIntersections(Ray)}.
+     */
     @Test
-    public void testFindIntsersections(){
+    public void testFindIntersections() {
+        Cylinder cylinder = new Cylinder(1.0, new Ray(new Vector(0, 0, 1), new Point(0, 0, 0)), 5.0);
 
+        // =============== Boundary Values Tests ==================
+        // Test case 1: Ray intersects the cylinder's tube
+        List<Point> intersections1 = cylinder.findIntersections(new Ray(new Vector(1, 1, 1), new Point(0, 0, -1)));
+        assertNotNull(intersections1,
+                "Expected intersections with the tube");
+        assertTrue(intersections1.size() > 0,
+                "Expected intersections with the tube");
+
+        // Test case 2: Ray intersects the cylinder's bottom cap
+        List<Point> intersections2 = cylinder.findIntersections(new Ray(new Vector(1, 1, -1), new Point(0, 0, -5)));
+        assertNotNull(intersections2,
+                "Expected intersections with the bottom cap");
+        assertTrue(intersections2.size() > 0,
+                "Expected intersections with the bottom cap");
+
+        // Test case 3: Ray intersects the cylinder's top cap
+        List<Point> intersections3 = cylinder.findIntersections(new Ray(new Vector(-1, -1, 1), new Point(0, 0, 5)));
+        assertNotNull(intersections3,
+                "Expected intersections with the top cap");
+        assertTrue(intersections3.size() > 0, 
+                "Expected intersections with the top cap");
+
+        // ============ Equivalence Partitions Tests ==============
+        // Test case 4: Ray does not intersect the cylinder
+        List<Point> intersections4 = cylinder.findIntersections(new Ray(new Vector(0, 0, 1), new Point(10, 10, 10)));
+        assertNull(intersections4,
+                "Expected no intersections with the cylinder");
     }
 }
 

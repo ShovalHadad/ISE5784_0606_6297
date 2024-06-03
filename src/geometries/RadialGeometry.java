@@ -5,8 +5,14 @@ package geometries;
  */
 public abstract class RadialGeometry implements Geometry {
     protected double radius;
-    // constructor
+
+    /**
+     * constructor
+     * @param radius
+     */
     public RadialGeometry(double radius){
+        if(radius <= 0)
+            throw new IllegalArgumentException("radius can not be 0 or less");
         this.radius = radius;
     }
 }

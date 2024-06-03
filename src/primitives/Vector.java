@@ -27,7 +27,6 @@ public class Vector extends Point {
             throw new IllegalArgumentException("Cannot be zero vector (0,0,0)");
         }
         super(xyz);
-
     }
 
     /**

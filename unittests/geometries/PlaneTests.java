@@ -1,58 +1,141 @@
-package geometries;//package unittests;
-
-import static org.junit.jupiter.api.Assertions.*;
-import static primitives.Util.isZero;
-
+package geometries;
 import org.junit.jupiter.api.Test;
 import primitives.*;
+import java.util.List;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Unit tests for geometries.Plane class
  */
 public class PlaneTests {
-    private static final double DELTA = 0.000001;
 
     /**
-     * Test method for {@link geometries.Plane#getNormal(Point)}.
+     * Test method for {@link geometries.Plane# Plane.getNormal(Point).}
      */
     @Test
     public void testGetNormal() {
-        Plane plane = new Plane(new Point(0, 0, 1), new Point(0, 1, 0), new Point(1, 0, 0));
-        Vector result = plane.getNormal(new Point(0, 0, 1));
-
-        // ============ Equivalence Partitions Tests ==============
-        // test that the length is 1
-        assertEquals(1,
-                result.length(),
-                DELTA,
-                "ERROR: the length of the normal is not 1");
-
-        // check the normal in orthogonal to the plane
-        assertTrue(isZero(result.dotProduct(new Vector(0, -1, 1))));
-        assertTrue(isZero(result.dotProduct(new Vector(-1, 1, 0))));
+        Plane plane = new Plane
+                (
+                        new Point(1, 0, 0),
+                        new Point(0, 1, 0),
+                        new Point(0, 0, 1)
+                );
+        double n = Math.sqrt(1d / 3);
+        assertEquals(new Vector(n, n, n),
+                plane.getNormal(new Point(0, 0, 1)),
+                "Bad normal to plane");
     }
 
     /**
-     * Test method for {@link geometries.Plane()}.
+     * Test method for {@link geometries.Plane# Plane.Plane(Point, Point,Point).}
      */
     @Test
     public void testConstructor() {
-        // ============ Boundary Values Tests ==================
-        // Test constructor with two identical points
-        assertThrows(IllegalArgumentException.class,
-                () -> new Plane(new Point(1, 1, 1),
-                        new Point(1, 1, 1), new Point(0, 0, 0)),
-                "Plane constructor does not throw an exception for identical points");
+        // ============ Equivalence Partitions Tests ==============
+        // TC01: Test for a proper result.
+        try {
+            new Plane
+                    (
+                            new Point(1, 0, 0),
+                            new Point(0, 1, 0),
+                            new Point(0, 0, 1)
+                    );
+        } catch (IllegalArgumentException error) {
+            fail("Failed constructor of the correct plane");
+        }
 
-        // Test constructor with collinear points
-        assertThrows(IllegalArgumentException.class,
-                () -> new Plane(new Point(1, 1, 1),
-                        new Point(2, 2, 2), new Point(3, 3, 3)),
-                "Plane constructor does not throw an exception for collinear points");
+        // ============ Boundary Values Tests =============
+        // TC02: Test when a point equal to b point.
+        try {
+            new Plane
+                    (
+                            new Point(1, 0, 0),
+                            new Point(1, 0, 0),
+                            new Point(0, 0, 1)
+                    );
+            fail("Constructed a plane while a point equal to b point");
+        } catch (IllegalArgumentException ignored) {
+        }
+
+        //TC03: Test when a point equal to c point.
+        try {
+            new Plane
+                    (
+                            new Point(1, 0, 0),
+                            new Point(0, 0, 1),
+                            new Point(1, 0, 0)
+                    );
+            fail("Constructed a plane while a point equal to c point");
+        } catch (IllegalArgumentException ignored) {
+        }
+
+        //TC04: Test when b point equal to c point.
+        try {
+            new Plane
+                    (
+                            new Point(1, 0, 0),
+                            new Point(0, 0, 1),
+                            new Point(0, 0, 1)
+                    );
+            fail("Constructed a plane while b point equal to c point");
+        } catch (IllegalArgumentException ignored) {
+        }
+
+        //TC05: Test when all 3 points are on the same line.
+        try {
+            new Plane
+                    (
+                            new Point(1, 2, 3),
+                            new Point(2, 3, 4),
+                            new Point(3, 4, 5)
+                    );
+            fail("Constructed a plane while all 3 point on the same plane");
+        } catch (IllegalArgumentException ignored) {
+        }
     }
 
+    /**
+     * Test method for {@link geometries.Plane#findIntersections(Ray)}
+     */
     @Test
-    public void testFindIntsersections(){
+    public void findIntersections() {
+        Plane plane = new Plane
+                (
+                        new Point(1, 0, 0),
+                        new Point(0, 1, 0),
+                        new Point(0, 0, 1)
+                );
 
+        // ============ Equivalence Partitions Tests ==============
+        // TC01: Ray intersects the plane (1 points)
+        List<Point> result = plane.findIntersections(new Ray(new Vector(0, 0, -1),  new Point(0,1,1)));
+        assertEquals(result.size(),
+                1,
+                "Wrong number of points");
+        assertEquals(new Point(0, 1, 0), result.get(0),
+                "Ray intersects the plane");
+
+        // TC02: Ray doesn't intersect the plane (0 points)
+        assertNull(plane.findIntersections(new Ray( new Vector(0, 0, 1),new Point(0, 1, 1))),
+                "Ray doesn't intersect the plane");
+
+        // =============== Boundary Values Tests ==================
+        //**** Group: Ray is parallel to the plane
+        //TC03: Ray is included in the plane
+        assertNull(plane.findIntersections(new Ray(new Vector(1, -1, 0),new Point(0, 0, 1))),
+                "Ray is included in the plane. Ray is parallel to the plane");
+
+        //TC04: Ray isn't included in the plane
+        assertNull(plane.findIntersections(new Ray( new Vector(1, -1, 0),new Point(0, 0, 2))),
+                "Ray isn't included in the plane. Ray is parallel to the plane");
+
+        //**** Group: Special case
+        //TC05: Ray begins at the plane (p0 is in the plane, but not the ray)
+        assertNull(plane.findIntersections(new Ray(new Vector(0, 0, -1),new Point(1, 0, 0))),
+                "Ray begins at the plane (p0 is in the plane, but not the ray)");
+
+        //TC06: Ray begins in the plane's reference point
+        assertNull(plane.findIntersections(new Ray(new Vector(1, 0, 0),plane.getQ())),
+                "Ray begins in the plane's reference point");
     }
 }

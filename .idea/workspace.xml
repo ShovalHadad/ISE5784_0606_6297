@@ -4,22 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5b2b54a-d520-461a-a30d-1ed7389f1e86" name="Changes" comment="start level 3">
+    <list default="true" id="f5b2b54a-d520-461a-a30d-1ed7389f1e86" name="Changes" comment="Organization of departments">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometries/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Cylinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/geometries/Geometries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Geometries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/geometries/Geometry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Geometry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/geometries/Intersectable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Intersectable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/geometries/Plane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Plane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/geometries/Polygon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Polygon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/geometries/RadialGeometry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/RadialGeometry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometries/Sphere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Sphere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/geometries/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/geometries/Tube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Tube.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/primitives/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/primitives/Ray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Ray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/primitives/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Vector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unittests/geometries/CylinderTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/CylinderTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unittests/geometries/GeometriesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/GeometriesTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unittests/geometries/PlaneTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/PlaneTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unittests/geometries/PolygonTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/PolygonTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/geometries/SphereTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/SphereTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unittests/geometries/TriangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/TriangleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unittests/geometries/TubeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/TubeTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unittests/primitives/PointTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/primitives/PointTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unittests/primitives/RayTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/primitives/RayTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unittests/primitives/VectorTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/primitives/VectorTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,10 +89,15 @@
     "Downloaded.Files.Path.Enabled": "true",
     "JUnit.All in ISE5784_0606_6297.executor": "Run",
     "JUnit.CylinderTests.executor": "Run",
+    "JUnit.CylinderTests.testFindIntersections.executor": "Run",
     "JUnit.CylinderTests.testGetNormal.executor": "Run",
     "JUnit.GeometriesTests.executor": "Run",
+    "JUnit.GeometriesTests.findIntersections.executor": "Run",
     "JUnit.GeometriesTests.testFindIntersections.executor": "Run",
     "JUnit.PlaneTests.executor": "Run",
+    "JUnit.PlaneTests.findIntersections.executor": "Run",
+    "JUnit.PlaneTests.testConstructor.executor": "Run",
+    "JUnit.PlaneTests.testFindIntsersections.executor": "Run",
     "JUnit.PlaneTests.testGetNormal.executor": "Run",
     "JUnit.PointTests.executor": "Run",
     "JUnit.PointTests.testAdd.executor": "Run",
@@ -93,12 +105,19 @@
     "JUnit.PointTests.testDistanceSquared.executor": "Run",
     "JUnit.PointTests.testSubtract.executor": "Run",
     "JUnit.PolygonTests.executor": "Run",
+    "JUnit.PolygonTests.testConstructor.executor": "Run",
+    "JUnit.PolygonTests.testFindIntersections.executor": "Run",
+    "JUnit.PolygonTests.testFindIntsersections.executor": "Run",
     "JUnit.PolygonTests.testGetNormal.executor": "Run",
+    "JUnit.RayTests.executor": "Run",
     "JUnit.RayTests.testGetPoint.executor": "Run",
     "JUnit.SphereTests.executor": "Run",
     "JUnit.SphereTests.findIntsersectionsTest.executor": "Run",
+    "JUnit.SphereTests.testConstructor.executor": "Run",
     "JUnit.SphereTests.testFindIntersections.executor": "Run",
+    "JUnit.TriangleTest.findIntersections.executor": "Run",
     "JUnit.TubeTests.executor": "Run",
+    "JUnit.TubeTests.testFindIntersections.executor": "Run",
     "JUnit.TubeTests.testGetNormal.executor": "Run",
     "JUnit.VectorTest.testLengthSquared().executor": "Run",
     "JUnit.VectorTest.testLengthSquared.executor": "Run",
@@ -135,7 +154,7 @@
       <recent name="geometries" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TubeTests">
+  <component name="RunManager" selected="JUnit.SphereTests">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ISE5784_0606_6297" />
@@ -145,37 +164,6 @@
     </configuration>
     <configuration name="Unnamed" type="CompoundRunConfigurationType">
       <method v="2" />
-    </configuration>
-    <configuration name="GeometriesTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ISE5784_0606_6297" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="geometries.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="geometries" />
-      <option name="MAIN_CLASS_NAME" value="geometries.GeometriesTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GeometriesTests.testFindIntersections" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ISE5784_0606_6297" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="geometries.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="geometries" />
-      <option name="MAIN_CLASS_NAME" value="geometries.GeometriesTests" />
-      <option name="METHOD_NAME" value="testFindIntersections" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="PlaneTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
@@ -188,6 +176,38 @@
       <option name="PACKAGE_NAME" value="geometries" />
       <option name="MAIN_CLASS_NAME" value="geometries.PlaneTests" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaneTests.testConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ISE5784_0606_6297" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="geometries.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="geometries" />
+      <option name="MAIN_CLASS_NAME" value="geometries.PlaneTests" />
+      <option name="METHOD_NAME" value="testConstructor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaneTests.testGetNormal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ISE5784_0606_6297" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="geometries.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="geometries" />
+      <option name="MAIN_CLASS_NAME" value="geometries.PlaneTests" />
+      <option name="METHOD_NAME" value="testGetNormal" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -207,7 +227,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TubeTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SphereTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
       <extension name="coverage">
         <pattern>
@@ -216,7 +236,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="geometries" />
-      <option name="MAIN_CLASS_NAME" value="geometries.TubeTests" />
+      <option name="MAIN_CLASS_NAME" value="geometries.SphereTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -225,19 +245,19 @@
     <list>
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="Compound.Unnamed" />
-      <item itemvalue="JUnit.GeometriesTests" />
-      <item itemvalue="JUnit.GeometriesTests.testFindIntersections" />
+      <item itemvalue="JUnit.PlaneTests.testConstructor" />
+      <item itemvalue="JUnit.PlaneTests.testGetNormal" />
+      <item itemvalue="JUnit.SphereTests" />
       <item itemvalue="JUnit.PlaneTests" />
       <item itemvalue="JUnit.PolygonTests" />
-      <item itemvalue="JUnit.TubeTests" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TubeTests" />
-        <item itemvalue="JUnit.PolygonTests" />
+        <item itemvalue="JUnit.SphereTests" />
         <item itemvalue="JUnit.PlaneTests" />
-        <item itemvalue="JUnit.GeometriesTests.testFindIntersections" />
-        <item itemvalue="JUnit.GeometriesTests" />
+        <item itemvalue="JUnit.PolygonTests" />
+        <item itemvalue="JUnit.PlaneTests.testConstructor" />
+        <item itemvalue="JUnit.PlaneTests.testGetNormal" />
       </list>
     </recent_temporary>
   </component>
@@ -322,7 +342,15 @@
       <option name="project" value="LOCAL‎" />
       <updated>1716826701589</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL‎-00010" summary="Organization of departments">
+      <option name="closed" value="true" />
+      <created>1717322864315</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL‎-00010" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1717322864315</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -343,7 +371,8 @@
     <MESSAGE value="in the middle of tests" />
     <MESSAGE value="finish the tests and bonus" />
     <MESSAGE value="start level 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="start level 3" />
+    <MESSAGE value="Organization of departments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Organization of departments" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ISE5784_0606_6297$VectorTest_testLengthSquared.ic" NAME="VectorTest.testLengthSquared Coverage Results" MODIFIED="1716126067785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
