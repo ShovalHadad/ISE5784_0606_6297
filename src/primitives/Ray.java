@@ -46,8 +46,10 @@ public class Ray {
 
     @Override
     public boolean equals(Object obj) {
-        if (!super.equals(obj)) return false;
-        return obj instanceof Ray;
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Ray ray = (Ray) obj;
+        return direction.equals(ray.direction) && head.equals(ray.head);
     }
 
     @Override

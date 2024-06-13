@@ -11,11 +11,13 @@ public class Vector extends Point {
      * @param z
      */
     public Vector(double x, double y, double z) {
-        if (x == 0 && y == 0 && z == 0) {
+//        if (x == 0 && y == 0 && z == 0) {
+//            throw new IllegalArgumentException("Cannot be zero vector (0,0,0)");
+//        }
+        if (Util.isZero(x) && Util.isZero(y) && Util.isZero(z)) {
             throw new IllegalArgumentException("Cannot be zero vector (0,0,0)");
         }
-        super(x, y, z); // This must be the first statement
-
+        super(x, y, z);
     }
 
     /**

@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5b2b54a-d520-461a-a30d-1ed7389f1e86" name="Changes" comment="start level 3">
-      <change afterPath="$PROJECT_DIR$/unittests/renderer/CameraIntegrationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unittests/renderer/CameraTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primitives/Ray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Ray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primitives/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Vector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/Camera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/Cloneable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/renderer/CameraIntegrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/CameraIntegrationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/renderer/CameraTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/CameraTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +73,11 @@
     "Application.Unnamed.executor": "Run",
     "Downloaded.Files.Path.Enabled": "true",
     "JUnit.All in ISE5784_0606_6297.executor": "Run",
+    "JUnit.CameraIntegrationTests.executor": "Run",
+    "JUnit.CameraTest.executor": "Run",
     "JUnit.CameraTest.testConstructRay.executor": "Run",
+    "JUnit.CameraTests.executor": "Run",
+    "JUnit.CameraTests.testConstructRay.executor": "Run",
     "JUnit.CylinderTests.executor": "Run",
     "JUnit.CylinderTests.testGetNormal.executor": "Run",
     "JUnit.GeometriesTests.executor": "Run",
@@ -137,7 +144,7 @@
       <recent name="geometries" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CameraTest.testConstructRay">
+  <component name="RunManager" selected="JUnit.CameraIntegrationTests">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ISE5784_0606_6297" />
@@ -148,7 +155,7 @@
     <configuration name="Unnamed" type="CompoundRunConfigurationType">
       <method v="2" />
     </configuration>
-    <configuration name="CameraTest.testConstructRay" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CameraIntegrationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
       <extension name="coverage">
         <pattern>
@@ -157,7 +164,68 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="renderer" />
-      <option name="MAIN_CLASS_NAME" value="renderer.CameraTest" />
+      <option name="MAIN_CLASS_NAME" value="renderer.CameraIntegrationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CameraTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ISE5784_0606_6297" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="renderer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.CameraTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CameraTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ISE5784_0606_6297" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="renderer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.CameraTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CameraTests.testConstructRay" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ISE5784_0606_6297" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="renderer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.CameraTests" />
+      <option name="METHOD_NAME" value="testConstructRay" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CameraTests.testConstructRay" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ISE5784_0606_6297" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="renderer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.CameraTests" />
       <option name="METHOD_NAME" value="testConstructRay" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -180,67 +248,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlaneTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ISE5784_0606_6297" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="geometries.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="geometries" />
-      <option name="MAIN_CLASS_NAME" value="geometries.PlaneTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PolygonTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ISE5784_0606_6297" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="geometries.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="geometries" />
-      <option name="MAIN_CLASS_NAME" value="geometries.PolygonTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TubeTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ISE5784_0606_6297" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="geometries.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="geometries" />
-      <option name="MAIN_CLASS_NAME" value="geometries.TubeTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="Compound.Unnamed" />
-      <item itemvalue="JUnit.CameraTest.testConstructRay" />
+      <item itemvalue="JUnit.CameraIntegrationTests" />
+      <item itemvalue="JUnit.CameraTests" />
+      <item itemvalue="JUnit.CameraTests.testConstructRay" />
       <item itemvalue="JUnit.IntegrationTest.testPlaneIntersections" />
-      <item itemvalue="JUnit.PlaneTests" />
-      <item itemvalue="JUnit.PolygonTests" />
-      <item itemvalue="JUnit.TubeTests" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CameraTest.testConstructRay" />
-        <item itemvalue="JUnit.IntegrationTest.testPlaneIntersections" />
-        <item itemvalue="JUnit.TubeTests" />
-        <item itemvalue="JUnit.PolygonTests" />
-        <item itemvalue="JUnit.PlaneTests" />
+        <item itemvalue="JUnit.CameraIntegrationTests" />
+        <item itemvalue="JUnit.CameraTests" />
+        <item itemvalue="JUnit.CameraTests.testConstructRay" />
+        <item itemvalue="JUnit.CameraTests" />
+        <item itemvalue="JUnit.CameraTests.testConstructRay" />
       </list>
     </recent_temporary>
   </component>
@@ -325,7 +347,15 @@
       <option name="project" value="LOCAL‎" />
       <updated>1716826701589</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL‎-00010" summary="start level 3">
+      <option name="closed" value="true" />
+      <created>1717951055575</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL‎-00010" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1717951055575</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
