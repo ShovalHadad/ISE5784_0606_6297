@@ -64,16 +64,16 @@ class SphereTests {
                 "Ray's line out of sphere");
 
         // TC02: Ray starts before and crosses the sphere (2 points)
-        List<Point> result = sphere.findIntersections(new Ray(new Vector(3, 1, 0), new Point(-1, 0, 0)));
+        List<Point> sphereIntersections = sphere.findIntersections(new Ray(new Vector(3, 1, 0), new Point(-1, 0, 0)));
 
-        assertEquals(2, result.size(),
+        assertEquals(2, sphereIntersections.size(),
                 "Wrong number of points");
 
-        if (result.get(0).getD1() > result.get(1).getD1()) {
-            result = List.of(result.get(1), result.get(0));
+        if (sphereIntersections.get(0).getX() > sphereIntersections.get(1).getX()) {
+            sphereIntersections = List.of(sphereIntersections.get(1), sphereIntersections.get(0));
         }
         assertEquals(List.of(p1, p2),
-                result,
+                sphereIntersections,
                 "Ray crosses sphere");
 
         // TC03: Ray starts inside the sphere (1 point)
@@ -99,17 +99,17 @@ class SphereTests {
         // **** Group: Ray's line goes through the center
         // TC07: Ray starts before the sphere (2 points)
         assertEquals(2,
-                result.size(),
+                sphereIntersections.size(),
                 "Wrong number of points");
-        result = sphere.findIntersections(new Ray(new Vector(0, 1, 0), new Point(1, -2, 0)));
+        sphereIntersections = sphere.findIntersections(new Ray(new Vector(0, 1, 0), new Point(1, -2, 0)));
 
-        if (result.get(0).getD2() > result.get(1).getD2()) {
-            result = List.of(result.get(1), result.get(0));
+        if (sphereIntersections.get(0).getY() > sphereIntersections.get(1).getY()) {
+            sphereIntersections = List.of(sphereIntersections.get(1), sphereIntersections.get(0));
         }
 
         assertEquals(List.of(new Point(1, -1, 0),
                         new Point(1, 1, 0)),
-                result,
+                sphereIntersections,
                 "Line through O, ray crosses sphere");
 
         // TC08: Ray starts at sphere and goes inside (1 point)

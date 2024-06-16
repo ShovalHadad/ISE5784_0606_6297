@@ -30,8 +30,13 @@ public class GeometriesTests {
         //TC03: just one geometry has intersections point
         assertEquals(1, points.size());
 
+        // ============ Equivalence Partitions Tests ==============
+        //TC05: part of the geometries has intersection points
+        assertEquals(2,
+                geometries.findIntersections(new Ray(new Vector(0.0, 0.0, 1.0), new Point(1.0, 0.0, -1.0))).size());
+
         //TC04: all the geometries have intersection points
-        Geometries geometries1 = new Geometries(
+        geometries = new Geometries(
                 new Sphere(0.5, new Point(0, 0, 2)),
                 new Polygon(
                         new Point(1, 0, 0),
@@ -45,14 +50,9 @@ public class GeometriesTests {
                         new Point(0, 0, 1)
                 )
         );
-        List<Point> result = geometries1.findIntersections(new Ray(new Vector(0, 0, 1), new Point(0.2, 0.2, -0.6)));
+        List<Point> result = geometries.findIntersections(new Ray(new Vector(0, 0, 1), new Point(0.2, 0.2, -0.6)));
         assertEquals(4,
                 result.size(),
                 "All geometries intersects");
-
-        // ============ Equivalence Partitions Tests ==============
-        //TC05: part of the geometries has intersection points
-        assertEquals(2,
-                geometries.findIntersections(new Ray(new Vector(0.0, 0.0, 1.0), new Point(1.0, 0.0, -1.0))).size());
     }
 }

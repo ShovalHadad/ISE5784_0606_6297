@@ -27,7 +27,7 @@ class TriangleTest {
                 result.size(),
                 "Wrong number of points");
         assertEquals(new Point(0.25d, 0.25d, 0.5d),
-                result.get(0),
+                result.getFirst(),
                 "Ray doesn't intersect the triangle");
 
         //TC02:Ray outside against vertex

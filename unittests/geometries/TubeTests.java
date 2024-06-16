@@ -42,7 +42,7 @@ public class TubeTests {
         List<Point> intersections1 = tube.findIntersections(new Ray(new Vector(1, 1, 1), new Point(0, 0, -1)));
         assertNotNull(intersections1,
                 "Expected intersections with the tube");
-        assertTrue(intersections1.size() > 0,
+        assertFalse(intersections1.isEmpty(),
                 "Expected intersections with the tube");
 
         // Test case 2: Ray does not intersect the tube

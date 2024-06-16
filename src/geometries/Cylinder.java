@@ -52,7 +52,7 @@ public class Cylinder extends Tube {
         Vector rayDirection = ray.getDirection();
 
         // Calculate the distance to the bottom cap
-        double t1 = (height - rayHead.getD3()) / rayDirection.getD3();
+        double t1 = (height - rayHead.getZ()) / rayDirection.getZ();
 
         // Check if the intersection point with the bottom cap is within the cylinder's bounds
         if (t1 >= 0) {
@@ -63,7 +63,7 @@ public class Cylinder extends Tube {
         }
 
         // Calculate the distance to the top cap
-        double t2 = (-rayHead.getD3()) / rayDirection.getD3();
+        double t2 = (-rayHead.getZ()) / rayDirection.getZ();
 
         // Check if the intersection point with the top cap is within the cylinder's bounds
         if (t2 >= 0 && t2 <= height) {

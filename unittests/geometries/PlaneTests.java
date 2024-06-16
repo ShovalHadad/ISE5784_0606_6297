@@ -33,65 +33,54 @@ public class PlaneTests {
     public void testConstructor() {
         // ============ Equivalence Partitions Tests ==============
         // TC01: Test for a proper result.
-        try {
-            new Plane
-                    (
-                            new Point(1, 0, 0),
-                            new Point(0, 1, 0),
-                            new Point(0, 0, 1)
-                    );
-        } catch (IllegalArgumentException error) {
-            fail("Failed constructor of the correct plane");
-        }
+        assertDoesNotThrow(() -> new Plane
+                (
+                        new Point(1, 0, 0),
+                        new Point(0, 1, 0),
+                        new Point(0, 0, 1)
+                ),
+                "Failed constructing a correct plane");
 
         // ============ Boundary Values Tests =============
         // TC02: Test when a point equal to b point.
-        try {
-            new Plane
-                    (
-                            new Point(1, 0, 0),
-                            new Point(1, 0, 0),
-                            new Point(0, 0, 1)
-                    );
-            fail("Constructed a plane while a point equal to b point");
-        } catch (IllegalArgumentException ignored) {
-        }
+        assertThrows(IllegalArgumentException.class,
+                () -> new Plane
+                        (
+                                new Point(1, 0, 0),
+                                new Point(1, 0, 0),
+                                new Point(0, 0, 1)
+                        ),
+                "Constructed a plane while a point equal to b point");
 
         //TC03: Test when a point equal to c point.
-        try {
-            new Plane
-                    (
-                            new Point(1, 0, 0),
-                            new Point(0, 0, 1),
-                            new Point(1, 0, 0)
-                    );
-            fail("Constructed a plane while a point equal to c point");
-        } catch (IllegalArgumentException ignored) {
-        }
+        assertThrows(IllegalArgumentException.class,
+                () -> new Plane
+                        (
+                                new Point(1, 0, 0),
+                                new Point(0, 0, 1),
+                                new Point(1, 0, 0)
+                        ),
+                "Constructed a plane while a point equal to c point");
 
         //TC04: Test when b point equal to c point.
-        try {
-            new Plane
-                    (
-                            new Point(1, 0, 0),
-                            new Point(0, 0, 1),
-                            new Point(0, 0, 1)
-                    );
-            fail("Constructed a plane while b point equal to c point");
-        } catch (IllegalArgumentException ignored) {
-        }
+        assertThrows(IllegalArgumentException.class,
+                () -> new Plane
+                        (
+                                new Point(1, 0, 0),
+                                new Point(0, 0, 1),
+                                new Point(0, 0, 1)
+                        ),
+                "Constructed a plane while b point equal to c point");
 
         //TC05: Test when all 3 points are on the same line.
-        try {
-            new Plane
-                    (
-                            new Point(1, 2, 3),
-                            new Point(2, 3, 4),
-                            new Point(3, 4, 5)
-                    );
-            fail("Constructed a plane while all 3 point on the same plane");
-        } catch (IllegalArgumentException ignored) {
-        }
+        assertThrows(IllegalArgumentException.class,
+                () -> new Plane
+                        (
+                                new Point(1, 2, 3),
+                                new Point(2, 3, 4),
+                                new Point(3, 4, 5)
+                        ),
+                "Constructed a plane while all 3 point on the same plane");
     }
 
     /**

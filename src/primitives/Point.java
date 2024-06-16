@@ -68,26 +68,26 @@ public class Point {
     }
 
     /**
-     * returns the d1
+     * returns x
      * @return double
      */
-    public double getD1() {
+    public double getX() {
         return this.xyz.d1;
     }
 
     /**
-     * returns the d2
+     * returns y
      * @return double
      */
-    public double getD2() {
+    public double getY() {
         return this.xyz.d2;
     }
 
     /**
-     * returns the d3
+     * returns z
      * @return double
      */
-    public double getD3() {
+    public double getZ() {
         return this.xyz.d3;
     }
 

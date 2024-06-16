@@ -56,21 +56,20 @@ public class CylinderTests {
         List<Point> intersections1 = cylinder.findIntersections(new Ray(new Vector(1, 1, 1), new Point(0, 0, -1)));
         assertNotNull(intersections1,
                 "Expected intersections with the tube");
-        assertTrue(intersections1.size() > 0,
-                "Expected intersections with the tube");
+        assertFalse(intersections1.isEmpty(), "Expected intersections with the tube");
 
         // Test case 2: Ray intersects the cylinder's bottom cap
         List<Point> intersections2 = cylinder.findIntersections(new Ray(new Vector(1, 1, -1), new Point(0, 0, -5)));
         assertNotNull(intersections2,
                 "Expected intersections with the bottom cap");
-        assertTrue(intersections2.size() > 0,
+        assertFalse(intersections2.isEmpty(),
                 "Expected intersections with the bottom cap");
 
         // Test case 3: Ray intersects the cylinder's top cap
         List<Point> intersections3 = cylinder.findIntersections(new Ray(new Vector(-1, -1, 1), new Point(0, 0, 5)));
         assertNotNull(intersections3,
                 "Expected intersections with the top cap");
-        assertTrue(intersections3.size() > 0, 
+        assertFalse(intersections3.isEmpty(),
                 "Expected intersections with the top cap");
 
         // ============ Equivalence Partitions Tests ==============

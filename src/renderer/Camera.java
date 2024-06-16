@@ -4,6 +4,8 @@ import primitives.*;
 
 import java.util.MissingResourceException;
 
+import static primitives.Util.*;
+
 /**
  * Camera class
  */
@@ -45,11 +47,11 @@ public class Camera implements Cloneable {
         double xj = (j - (nX - 1) / 2d) * rx;
         double yi = -(i - (nY - 1) / 2d) * ry;
 
-        if (!Util.isZero(xj)) {
+        if (!isZero(xj)) {
             //add the delta distance to the center of point (i,j)
             pij = pij.add(vRight.scale(xj));
         }
-        if (!Util.isZero(yi)) {
+        if (!isZero(yi)) {
             //add the delta distance to the center of point (i,j)
             pij = pij.add(vUp.scale(yi));
         }
