@@ -12,7 +12,7 @@ import primitives.*;
  *
  * @author Dan
  */
-public class Polygon implements Geometry {
+public class Polygon extends Geometry {
     /**
      * List of polygon's vertices
      */
@@ -92,8 +92,8 @@ public class Polygon implements Geometry {
     }
 
     @Override
-    public List<Point> findIntersections(Ray ray) {
-        List<Point> planeIntersection = plane.findIntersections(ray);
+    public List<GeoPoint> findGeoIntersectionsHelper(Ray ray) {
+        List<GeoPoint> planeIntersection = plane.findGeoIntersectionsHelper(ray);
 
         if (planeIntersection == null) {
             return null;
@@ -104,7 +104,7 @@ public class Polygon implements Geometry {
         Vector v = ray.getDirection();
 
         Vector v1 = vertices.get(numV - 1).subtract(p0);
-        Vector v2 = vertices.get(0).subtract(p0);
+        Vector v2 = vertices.getFirst().subtract(p0);
 
         Vector n = v1.crossProduct(v2).normalize();
         double vn = v.dotProduct(n);
@@ -133,4 +133,46 @@ public class Polygon implements Geometry {
 
         return planeIntersection;
     }
+//    @Override
+//    public List<Point> findIntersections(Ray ray) {
+//        List<Point> planeIntersection = plane.findIntersections(ray);
+//
+//        if (planeIntersection == null) {
+//            return null;
+//        }
+//
+//        int numV = vertices.size();
+//        Point p0 = ray.getHead();
+//        Vector v = ray.getDirection();
+//
+//        Vector v1 = vertices.get(numV - 1).subtract(p0);
+//        Vector v2 = vertices.get(0).subtract(p0);
+//
+//        Vector n = v1.crossProduct(v2).normalize();
+//        double vn = v.dotProduct(n);
+//        boolean positive = vn > 0;
+//
+//        if (isZero(vn)) {
+//            return null;
+//        }
+//
+//        for (int i = 1; i < numV; ++i) {
+//            v1 = v2;
+//            v2 = vertices.get(i).subtract(p0);
+//            n = v1.crossProduct(v2).normalize();
+//            vn = v.dotProduct(n);
+//
+//            //no intersection
+//            if (isZero(vn)) {
+//                return null;
+//            }
+//
+//            //not the same sign
+//            if (vn > 0 != positive) {
+//                return null;
+//            }
+//        }
+//
+//        return planeIntersection;
+//    }
 }

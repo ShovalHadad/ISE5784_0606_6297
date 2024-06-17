@@ -2,6 +2,7 @@ package geometries;
 import primitives.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import geometries.Intersectable.GeoPoint;
 import java.util.List;
 
 /**
@@ -53,20 +54,20 @@ public class CylinderTests {
 
         // =============== Boundary Values Tests ==================
         // Test case 1: Ray intersects the cylinder's tube
-        List<Point> intersections1 = cylinder.findIntersections(new Ray(new Vector(1, 1, 1), new Point(0, 0, -1)));
+        List<GeoPoint> intersections1 = cylinder.findGeoIntersections(new Ray(new Vector(1, 1, 1), new Point(0, 0, -1)));
         assertNotNull(intersections1,
                 "Expected intersections with the tube");
         assertFalse(intersections1.isEmpty(), "Expected intersections with the tube");
 
         // Test case 2: Ray intersects the cylinder's bottom cap
-        List<Point> intersections2 = cylinder.findIntersections(new Ray(new Vector(1, 1, -1), new Point(0, 0, -5)));
+        List<GeoPoint> intersections2 = cylinder.findGeoIntersections(new Ray(new Vector(1, 1, -1), new Point(0, 0, -5)));
         assertNotNull(intersections2,
                 "Expected intersections with the bottom cap");
         assertFalse(intersections2.isEmpty(),
                 "Expected intersections with the bottom cap");
 
         // Test case 3: Ray intersects the cylinder's top cap
-        List<Point> intersections3 = cylinder.findIntersections(new Ray(new Vector(-1, -1, 1), new Point(0, 0, 5)));
+        List<GeoPoint> intersections3 = cylinder.findGeoIntersections(new Ray(new Vector(-1, -1, 1), new Point(0, 0, 5)));
         assertNotNull(intersections3,
                 "Expected intersections with the top cap");
         assertFalse(intersections3.isEmpty(),
@@ -74,7 +75,7 @@ public class CylinderTests {
 
         // ============ Equivalence Partitions Tests ==============
         // Test case 4: Ray does not intersect the cylinder
-        List<Point> intersections4 = cylinder.findIntersections(new Ray(new Vector(0, 0, 1), new Point(10, 10, 10)));
+        List<GeoPoint> intersections4 = cylinder.findGeoIntersections(new Ray(new Vector(0, 0, 1), new Point(10, 10, 10)));
         assertNull(intersections4,
                 "Expected no intersections with the cylinder");
     }

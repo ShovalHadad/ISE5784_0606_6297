@@ -38,11 +38,11 @@ public class Cylinder extends Tube {
     }
 
     @Override
-    public List<Point> findIntersections(Ray ray) {
-        List<Point> intersections = new LinkedList<>();
+    public List<GeoPoint> findGeoIntersectionsHelper(Ray ray) {
+        List<GeoPoint> intersections = new LinkedList<>();
 
         // Find intersections with the tube part
-        List<Point> tubeIntersections = super.findIntersections(ray);
+        List<GeoPoint> tubeIntersections = super.findGeoIntersectionsHelper(ray);
         if (tubeIntersections != null) {
             intersections.addAll(tubeIntersections);
         }
@@ -56,8 +56,8 @@ public class Cylinder extends Tube {
 
         // Check if the intersection point with the bottom cap is within the cylinder's bounds
         if (t1 >= 0) {
-            Point bottomCapIntersection = ray.getPoint(t1);
-            if (bottomCapIntersection.distanceSquared(axis.getHead()) <= radius * radius) {
+            GeoPoint bottomCapIntersection = new GeoPoint(this, ray.getPoint(t1));
+            if (bottomCapIntersection.point.distanceSquared(axis.getHead()) <= radius * radius) {
                 intersections.add(bottomCapIntersection);
             }
         }
@@ -67,13 +67,52 @@ public class Cylinder extends Tube {
 
         // Check if the intersection point with the top cap is within the cylinder's bounds
         if (t2 >= 0 && t2 <= height) {
-            Point topCapIntersection = ray.getPoint(t2);
-            if (topCapIntersection.distanceSquared(axis.getHead().add(axis.getDirection().scale(height))) <= radius * radius) {
+            GeoPoint topCapIntersection = new GeoPoint(this, ray.getPoint(t2));
+            if (topCapIntersection.point.distanceSquared(axis.getHead().add(axis.getDirection().scale(height))) <= radius * radius) {
                 intersections.add(topCapIntersection);
             }
         }
 
         return intersections.isEmpty() ? null : intersections;
     }
+
+// @Override
+//    public List<Point> findIntersections(Ray ray) {
+//        List<Point> intersections = new LinkedList<>();
+//
+//        // Find intersections with the tube part
+//        List<Point> tubeIntersections = super.findIntersections(ray);
+//        if (tubeIntersections != null) {
+//            intersections.addAll(tubeIntersections);
+//        }
+//
+//        // Find intersections with the bottom and top caps
+//        Point rayHead = ray.getHead();
+//        Vector rayDirection = ray.getDirection();
+//
+//        // Calculate the distance to the bottom cap
+//        double t1 = (height - rayHead.getZ()) / rayDirection.getZ();
+//
+//        // Check if the intersection point with the bottom cap is within the cylinder's bounds
+//        if (t1 >= 0) {
+//            Point bottomCapIntersection = ray.getPoint(t1);
+//            if (bottomCapIntersection.distanceSquared(axis.getHead()) <= radius * radius) {
+//                intersections.add(bottomCapIntersection);
+//            }
+//        }
+//
+//        // Calculate the distance to the top cap
+//        double t2 = (-rayHead.getZ()) / rayDirection.getZ();
+//
+//        // Check if the intersection point with the top cap is within the cylinder's bounds
+//        if (t2 >= 0 && t2 <= height) {
+//            Point topCapIntersection = ray.getPoint(t2);
+//            if (topCapIntersection.distanceSquared(axis.getHead().add(axis.getDirection().scale(height))) <= radius * radius) {
+//                intersections.add(topCapIntersection);
+//            }
+//        }
+//
+//        return intersections.isEmpty() ? null : intersections;
+//    }
 
 }

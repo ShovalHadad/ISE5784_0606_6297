@@ -9,7 +9,7 @@ import primitives.Ray;
  * Geometries class.
  * Class representing a collection of intersectable geometries.
  */
-public class Geometries implements Intersectable {
+public class Geometries extends Intersectable {
     private final List<Intersectable> geometries = new LinkedList<>();
 
     /**
@@ -34,14 +34,15 @@ public class Geometries implements Intersectable {
     }
 
     @Override
-    public List<Point> findIntersections(Ray ray) {
+    public List<GeoPoint> findGeoIntersectionsHelper(Ray ray) {
         // returns the list of the geometries that intersect with the ray (input)
-        List<Point> resultOfIntersections = null;
+        List<GeoPoint> resultOfIntersections = null;
+        //for (Intersectable geometry : scene.geometries) {
         for (Intersectable geometry : geometries) {
-            List<Point> geometryIntersections = geometry.findIntersections(ray);
+            List<GeoPoint> geometryIntersections = geometry.findGeoIntersections(ray);
             if (geometryIntersections != null) {
                 if (resultOfIntersections == null) {
-                    resultOfIntersections = new LinkedList<Point>();
+                    resultOfIntersections = new LinkedList<GeoPoint>();
                 }
                 resultOfIntersections.addAll(geometryIntersections);
             }

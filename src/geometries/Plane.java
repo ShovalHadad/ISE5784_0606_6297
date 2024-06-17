@@ -7,7 +7,7 @@ import static primitives.Util.isZero;
 /**
  * Plan class -> Represents a plane in 3D space.
  */
- public class Plane implements Geometry {
+ public class Plane extends Geometry {
     private final Point q;
     private final Vector normal;
 
@@ -59,7 +59,7 @@ import static primitives.Util.isZero;
     }
 
     @Override
-    public List<Point> findIntersections(Ray ray) {
+    public List<GeoPoint> findGeoIntersectionsHelper(Ray ray) {
         Vector dir = ray.getDirection();
         Point head = ray.getHead();
         Vector n = normal;
@@ -83,6 +83,33 @@ import static primitives.Util.isZero;
         if (t <= 0) {
             return null;
         }
-        return List.of(ray.getPoint(t));
+        return List.of(new GeoPoint(this, ray.getPoint(t)));
     }
+//    @Override
+//    public List<Point> findIntersections(Ray ray) {
+//        Vector dir = ray.getDirection();
+//        Point head = ray.getHead();
+//        Vector n = normal;
+//        if (q.equals(head)) {
+//            return null;
+//        }
+//        Vector head_q = q.subtract((head));
+//        //numerator
+//        double nhead_q = alignZero(n.dotProduct(head_q));
+//        if (isZero(nhead_q)) {
+//            return null;
+//        }
+//        //denominator
+//        double ndir = alignZero(n.dotProduct(dir));
+//
+//        //ray is lying in the plane axis
+//        if (isZero(ndir)) {
+//            return null;
+//        }
+//        double t = alignZero(nhead_q / ndir);
+//        if (t <= 0) {
+//            return null;
+//        }
+//        return List.of(ray.getPoint(t));
+//    }
 }

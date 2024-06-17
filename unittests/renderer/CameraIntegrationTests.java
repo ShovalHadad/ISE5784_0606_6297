@@ -5,16 +5,18 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import primitives.*;
 import geometries.*;
-//import scene.Scene;
+import scene.Scene;
 
 /**
  * Camera Integration tests for ray tracing
  */
 class CameraIntegrationTests {
-
+    private final Scene scene  = new Scene("Test scene");
     // camera to check on
     private Camera setupCamera(Point location) {
         return Camera.getBuilder()
+                .setRayTracer(new SimpleRayTracer(scene))
+                .setImageWriter(new ImageWriter("base test", 3, 3))
                 .setLocation(location)
                 .setDirection(new Vector(0, 0, -1), new Vector(0, 1, 0))
                 .setVpSize(3, 3)
@@ -28,7 +30,7 @@ class CameraIntegrationTests {
         for (int i = 0; i < nY; i++) {
             for (int j = 0; j < nX; j++) {
                 Ray ray = camera.constructRay(nX, nY, j, i);
-                var intersections = geometry.findIntersections(ray);
+                var intersections = geometry.findGeoIntersections(ray);
                 if (intersections != null) {
                     count += intersections.size();
                 }

@@ -3,6 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import java.util.List;
 import primitives.*;
+import geometries.Intersectable.GeoPoint;
 
 /**
  * Unit tests for geometries.Tube class
@@ -39,14 +40,14 @@ public class TubeTests {
 
         // =============== Boundary Values Tests ==================
         // Test case 1: Ray intersects the tube
-        List<Point> intersections1 = tube.findIntersections(new Ray(new Vector(1, 1, 1), new Point(0, 0, -1)));
+        List<GeoPoint> intersections1 = tube.findGeoIntersections(new Ray(new Vector(1, 1, 1), new Point(0, 0, -1)));
         assertNotNull(intersections1,
                 "Expected intersections with the tube");
         assertFalse(intersections1.isEmpty(),
                 "Expected intersections with the tube");
 
         // Test case 2: Ray does not intersect the tube
-        List<Point> intersections2 = tube.findIntersections(new Ray(new Vector(0, 0, 1), new Point(10, 10, 10)));
+        List<GeoPoint> intersections2 = tube.findGeoIntersections(new Ray(new Vector(0, 0, 1), new Point(10, 10, 10)));
         assertNull(intersections2, "Expected no intersections with the tube");
     }
 }

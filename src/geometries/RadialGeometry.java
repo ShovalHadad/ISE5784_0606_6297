@@ -3,7 +3,7 @@ package geometries;
 /**
  * RadialGeometry class -> helps to make rounded shapes
  */
-public abstract class RadialGeometry implements Geometry {
+public abstract class RadialGeometry extends Geometry {
     protected double radius;
 
     /**

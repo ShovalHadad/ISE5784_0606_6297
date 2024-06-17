@@ -106,7 +106,7 @@ public class Camera implements Cloneable {
      * This function starts the method to create the image
      */
     public void writeToImage() {
-        this.imageWriter.writeToImage();
+        imageWriter.writeToImage();
     }
 
     /**
@@ -116,7 +116,8 @@ public class Camera implements Cloneable {
      */
     private void castRay(int i,int j){
         Ray ray = constructRay(this.imageWriter.getNx(), this.imageWriter.getNy(), j, i);
-        this.imageWriter.writePixel(j, i, this.rayTracer.traceRay(ray));
+        Color color = rayTracer.traceRay(ray);
+        imageWriter.writePixel(j, i, color);
     }
 
 

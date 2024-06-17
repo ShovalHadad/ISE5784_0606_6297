@@ -25,11 +25,11 @@ public class Scene {
     /**
      * set the background color
      *
-     * @param color the background color
+     * @param background is the background color
      * @return the object for the scene
      */
-    public Scene setBackground(Color color) {
-        this.background = color;
+    public Scene setBackground(Color background) {
+        this.background = background;
         return this;
     }
 
