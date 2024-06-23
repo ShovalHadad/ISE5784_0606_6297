@@ -2,7 +2,11 @@ package scene;
 
 import geometries.Geometries;
 import lighting.AmbientLight;
+import lighting.LightSource;
 import primitives.Color;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Scene Class
@@ -13,6 +17,7 @@ public class Scene {
     public Color background = Color.BLACK;  // background color
     public AmbientLight ambientLight = AmbientLight.NONE; // ambient lighting
     public Geometries geometries = new Geometries(); //the 3D model
+    public List<LightSource> lights = new LinkedList<>(); //list of lights
 
     /**
      * Constructor for initializing the name
@@ -55,4 +60,14 @@ public class Scene {
         return this;
     }
 
+    /**
+     * set the lights
+     * @param lights list of lights
+     * @return this
+     */
+    public Scene setLights(List<LightSource> lights){
+        if(lights != null)
+            this.lights = lights;
+        return this;
+    }
 }

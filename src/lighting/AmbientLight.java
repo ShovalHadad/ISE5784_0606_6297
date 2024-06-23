@@ -4,6 +4,7 @@ import primitives.*;
 
 /**
  * Ambient Light Class
+ * background light
  * for all object in 3D space
  */
 public class AmbientLight extends Light {
@@ -34,6 +35,4 @@ public class AmbientLight extends Light {
     public AmbientLight(Color Ia, double Kad) {
         super(Ia.scale(Kad));
     }
-
-
 }

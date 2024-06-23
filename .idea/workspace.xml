@@ -4,14 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5b2b54a-d520-461a-a30d-1ed7389f1e86" name="Changes" comment="stage 6.1 - finnish">
-      <change afterPath="$PROJECT_DIR$/src/lighting/DirectionalLight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lighting/Light.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lighting/LightSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lighting/PointLight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lighting/SpotLight.java" afterDir="false" />
+    <list default="true" id="f5b2b54a-d520-461a-a30d-1ed7389f1e86" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/lighting/AmbientLight.java&#10;#&#9;src/primitives/Color.java&#10;#&#9;src/primitives/Ray.java&#10;#&#9;src/renderer/RayTracerBase.java&#10;#&#9;src/renderer/SimpleRayTracer.java&#10;#&#9;unittests/primitives/RayTests.java&#10;#&#9;unittests/renderer/CameraIntegrationTests.java&#10;#&#9;unittests/renderer/CameraTests.java&#10;#&#9;unittests/renderer/RenderTests.java">
+      <change afterPath="$PROJECT_DIR$/src/primitives/Material.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/geometries/Geometry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Geometry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lighting/AmbientLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/AmbientLight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lighting/DirectionalLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/DirectionalLight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lighting/Light.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/Light.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lighting/LightSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/LightSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lighting/PointLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/PointLight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lighting/SpotLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/SpotLight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/SimpleRayTracer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/SimpleRayTracer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scene/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scene/Scene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/renderer/CameraIntegrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/CameraIntegrationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/renderer/CameraIntegrationsTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/unittests/renderer/RenderTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/RenderTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,10 +28,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="module-info" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -93,6 +99,11 @@
     "JUnit.ImageWriterTest.testWriteToImage.executor": "Run",
     "JUnit.IntegrationTest.executor": "Run",
     "JUnit.IntegrationTest.testPlaneIntersections.executor": "Run",
+    "JUnit.LightsTests.executor": "Run",
+    "JUnit.LightsTests.sphereMultipleLights.executor": "Run",
+    "JUnit.LightsTests.sphereSpotSharp.executor": "Run",
+    "JUnit.LightsTests.trianglesMultipleLights.executor": "Run",
+    "JUnit.LightsTests.trianglesSpotSharp.executor": "Run",
     "JUnit.PlaneTests.executor": "Run",
     "JUnit.PlaneTests.findIntersections.executor": "Run",
     "JUnit.PlaneTests.testConstructor.executor": "Run",
@@ -108,7 +119,7 @@
     "JUnit.RayTests.testFindClosestPoint.executor": "Run",
     "JUnit.RayTests.testGetPoint.executor": "Run",
     "JUnit.RenderTests.basicRenderXml.executor": "Run",
-    "JUnit.RenderTests.executor": "Debug",
+    "JUnit.RenderTests.executor": "Run",
     "JUnit.RenderTests.renderMultiColorTest.executor": "Run",
     "JUnit.RenderTests.renderTwoColorTest.executor": "Run",
     "JUnit.SphereTests.executor": "Run",
@@ -137,7 +148,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/owner/Desktop/JavaProject/ISE5784_0606_6297",
+    "last_opened_file_path": "C:/Users/USER/Downloads/ISE5784_4171_0954-PR06",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -160,12 +171,13 @@
       <recent name="C:\Users\owner\Desktop\JavaProject\PROJECT11\src" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="lighting" />
       <recent name="renderer" />
       <recent name="primitives" />
       <recent name="geometries" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in ISE5784_0606_6297">
+  <component name="RunManager" selected="JUnit.LightsTests">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ISE5784_0606_6297" />
@@ -176,72 +188,80 @@
     <configuration name="Unnamed" type="CompoundRunConfigurationType">
       <method v="2" />
     </configuration>
-    <configuration name="All in ISE5784_0606_6297" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ISE5784_0606_6297" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CylinderTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LightsTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="geometries.*" />
+          <option name="PATTERN" value="lighting.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="geometries" />
-      <option name="MAIN_CLASS_NAME" value="geometries.CylinderTests" />
+      <option name="PACKAGE_NAME" value="lighting" />
+      <option name="MAIN_CLASS_NAME" value="lighting.LightsTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CylinderTests.testFindIntersections" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LightsTests.sphereMultipleLights" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="geometries.*" />
+          <option name="PATTERN" value="lighting.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="geometries" />
-      <option name="MAIN_CLASS_NAME" value="geometries.CylinderTests" />
-      <option name="METHOD_NAME" value="testFindIntersections" />
+      <option name="PACKAGE_NAME" value="lighting" />
+      <option name="MAIN_CLASS_NAME" value="lighting.LightsTests" />
+      <option name="METHOD_NAME" value="sphereMultipleLights" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PolygonTests.testFindIntersections" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LightsTests.sphereSpotSharp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="geometries.*" />
+          <option name="PATTERN" value="lighting.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="geometries" />
-      <option name="MAIN_CLASS_NAME" value="geometries.PolygonTests" />
-      <option name="METHOD_NAME" value="testFindIntersections" />
+      <option name="PACKAGE_NAME" value="lighting" />
+      <option name="MAIN_CLASS_NAME" value="lighting.LightsTests" />
+      <option name="METHOD_NAME" value="sphereSpotSharp" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TubeTests.testFindIntersections" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LightsTests.trianglesMultipleLights" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="geometries.*" />
+          <option name="PATTERN" value="lighting.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="geometries" />
-      <option name="MAIN_CLASS_NAME" value="geometries.TubeTests" />
-      <option name="METHOD_NAME" value="testFindIntersections" />
+      <option name="PACKAGE_NAME" value="lighting" />
+      <option name="MAIN_CLASS_NAME" value="lighting.LightsTests" />
+      <option name="METHOD_NAME" value="trianglesMultipleLights" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LightsTests.trianglesSpotSharp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ISE5784_0606_6297" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lighting.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lighting" />
+      <option name="MAIN_CLASS_NAME" value="lighting.LightsTests" />
+      <option name="METHOD_NAME" value="trianglesSpotSharp" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -250,19 +270,19 @@
     <list>
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="Compound.Unnamed" />
-      <item itemvalue="JUnit.CylinderTests" />
-      <item itemvalue="JUnit.CylinderTests.testFindIntersections" />
-      <item itemvalue="JUnit.PolygonTests.testFindIntersections" />
-      <item itemvalue="JUnit.TubeTests.testFindIntersections" />
-      <item itemvalue="JUnit.All in ISE5784_0606_6297" />
+      <item itemvalue="JUnit.LightsTests.sphereMultipleLights" />
+      <item itemvalue="JUnit.LightsTests.trianglesMultipleLights" />
+      <item itemvalue="JUnit.LightsTests.trianglesSpotSharp" />
+      <item itemvalue="JUnit.LightsTests" />
+      <item itemvalue="JUnit.LightsTests.sphereSpotSharp" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in ISE5784_0606_6297" />
-        <item itemvalue="JUnit.CylinderTests" />
-        <item itemvalue="JUnit.CylinderTests.testFindIntersections" />
-        <item itemvalue="JUnit.TubeTests.testFindIntersections" />
-        <item itemvalue="JUnit.PolygonTests.testFindIntersections" />
+        <item itemvalue="JUnit.LightsTests" />
+        <item itemvalue="JUnit.LightsTests.trianglesMultipleLights" />
+        <item itemvalue="JUnit.LightsTests.sphereMultipleLights" />
+        <item itemvalue="JUnit.LightsTests.sphereSpotSharp" />
+        <item itemvalue="JUnit.LightsTests.trianglesSpotSharp" />
       </list>
     </recent_temporary>
   </component>
@@ -403,7 +423,23 @@
       <option name="project" value="LOCAL‎" />
       <updated>1719137694784</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL‎-00017" summary="stage 6.1 - finnish">
+      <option name="closed" value="true" />
+      <created>1719165250956</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL‎-00017" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1719165250956</updated>
+    </task>
+    <task id="LOCAL‎-00018" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/lighting/AmbientLight.java&#10;#&#9;src/primitives/Color.java&#10;#&#9;src/primitives/Ray.java&#10;#&#9;src/renderer/RayTracerBase.java&#10;#&#9;src/renderer/SimpleRayTracer.java&#10;#&#9;unittests/primitives/RayTests.java&#10;#&#9;unittests/renderer/CameraIntegrationTests.java&#10;#&#9;unittests/renderer/CameraTests.java&#10;#&#9;unittests/renderer/RenderTests.java">
+      <option name="closed" value="true" />
+      <created>1719165313180</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL‎-00018" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1719165313180</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -429,7 +465,8 @@
     <MESSAGE value="stage 5 complete" />
     <MESSAGE value="6.1-not good (test poly and tri &amp; color)" />
     <MESSAGE value="stage 6.1 - finnish" />
-    <option name="LAST_COMMIT_MESSAGE" value="stage 6.1 - finnish" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/lighting/AmbientLight.java&#10;#&#9;src/primitives/Color.java&#10;#&#9;src/primitives/Ray.java&#10;#&#9;src/renderer/RayTracerBase.java&#10;#&#9;src/renderer/SimpleRayTracer.java&#10;#&#9;unittests/primitives/RayTests.java&#10;#&#9;unittests/renderer/CameraIntegrationTests.java&#10;#&#9;unittests/renderer/CameraTests.java&#10;#&#9;unittests/renderer/RenderTests.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/lighting/AmbientLight.java&#10;#&#9;src/primitives/Color.java&#10;#&#9;src/primitives/Ray.java&#10;#&#9;src/renderer/RayTracerBase.java&#10;#&#9;src/renderer/SimpleRayTracer.java&#10;#&#9;unittests/primitives/RayTests.java&#10;#&#9;unittests/renderer/CameraIntegrationTests.java&#10;#&#9;unittests/renderer/CameraTests.java&#10;#&#9;unittests/renderer/RenderTests.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
