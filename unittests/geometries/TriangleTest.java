@@ -27,8 +27,8 @@ class TriangleTest {
         assertEquals(1,
                 result.size(),
                 "Wrong number of points");
-       // assertEquals(new GeoPoint(triangle, new Point(0.25d, 0.25d, 0.5d)), result.getFirst(),
-        //        "Ray doesn't intersect the triangle");
+        assertEquals(new GeoPoint(triangle, new Point(0.25d, 0.25d, 0.5d)), result.getFirst(),
+                "Ray doesn't intersect the triangle");
 
         //TC02:Ray outside against vertex
         assertNull(triangle.findGeoIntersectionsHelper(new Ray( new Vector(1, 1, 2),new Point(-2, -2, -2))),

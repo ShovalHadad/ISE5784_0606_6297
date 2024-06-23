@@ -4,14 +4,11 @@ import java.util.List;
 
 public abstract class Intersectable {
 
-    //    /**
-//     * function to find intersections points with the ray
-//     * @param ray to check on
-//     * @return list of intersections points
-//     */
-//    public List<Point> findIntersections(Ray ray) {
-//        return null;
-//    }
+    /**
+     * function to find intersections points with the ray
+     * @param ray to check on
+     * @return list of intersections points
+     */
     public List<Point> findIntersections(Ray ray) {
         var geoList = findGeoIntersections(ray);
         return geoList == null ? null : geoList.stream().map(gp -> gp.point).toList();
@@ -35,9 +32,7 @@ public abstract class Intersectable {
      * @param ray input
      * @return list of GeoPoints
      */
-    protected List<GeoPoint> findGeoIntersectionsHelper(Ray ray) {
-        return null;
-    }
+    protected abstract List<GeoPoint> findGeoIntersectionsHelper(Ray ray);
 
 
     /**

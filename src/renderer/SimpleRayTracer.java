@@ -36,11 +36,14 @@ public class SimpleRayTracer extends RayTracerBase{
 
     @Override
     public Color traceRay(Ray ray) {
+        var intersections = scene.geometries.findGeoIntersections(ray);
+        return intersections == null ? scene.background : calcColor(ray.findClosestGeoPoint(intersections));
+
         //Searched for intersections with the 3D model
-        List<GeoPoint> intersections  = this.scene.geometries.findGeoIntersections(ray);
-        if (intersections == null) {
-            return this.scene.background;
-        }
-        return calcColor(ray.findClosestGeoPoint(intersections));
+//        List<GeoPoint> intersections  = this.scene.geometries.findGeoIntersections(ray);
+//        if (intersections == null) {
+//            return this.scene.background;
+//        }
+//        return calcColor(ray.findClosestGeoPoint(intersections));
     }
 }

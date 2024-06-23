@@ -3,6 +3,7 @@ package primitives;
 
 import geometries.Intersectable.GeoPoint;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -83,6 +84,7 @@ public class Ray {
 //       }
 //       return closestPoint;
 //   }
+
     public Point findClosestPoint(List<Point> points) {
         return points == null || points.isEmpty() ? null
                 : findClosestGeoPoint(points.stream().map(p -> new GeoPoint(null, p)).toList()).point;

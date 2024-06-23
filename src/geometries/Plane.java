@@ -59,7 +59,7 @@ import static primitives.Util.isZero;
     }
 
     @Override
-    public List<GeoPoint> findGeoIntersectionsHelper(Ray ray) {
+    protected List<GeoPoint> findGeoIntersectionsHelper(Ray ray) {
         Vector dir = ray.getDirection();
         Point head = ray.getHead();
         Vector n = normal;
@@ -85,31 +85,32 @@ import static primitives.Util.isZero;
         }
         return List.of(new GeoPoint(this, ray.getPoint(t)));
     }
-//    @Override
-//    public List<Point> findIntersections(Ray ray) {
-//        Vector dir = ray.getDirection();
-//        Point head = ray.getHead();
-//        Vector n = normal;
-//        if (q.equals(head)) {
-//            return null;
-//        }
-//        Vector head_q = q.subtract((head));
-//        //numerator
-//        double nhead_q = alignZero(n.dotProduct(head_q));
-//        if (isZero(nhead_q)) {
-//            return null;
-//        }
-//        //denominator
-//        double ndir = alignZero(n.dotProduct(dir));
-//
-//        //ray is lying in the plane axis
-//        if (isZero(ndir)) {
-//            return null;
-//        }
-//        double t = alignZero(nhead_q / ndir);
-//        if (t <= 0) {
-//            return null;
-//        }
-//        return List.of(ray.getPoint(t));
-//    }
+
+    @Override
+    public List<Point> findIntersections(Ray ray) {
+        Vector dir = ray.getDirection();
+        Point head = ray.getHead();
+        Vector n = normal;
+        if (q.equals(head)) {
+            return null;
+        }
+        Vector head_q = q.subtract((head));
+        //numerator
+        double nhead_q = alignZero(n.dotProduct(head_q));
+        if (isZero(nhead_q)) {
+            return null;
+        }
+        //denominator
+        double ndir = alignZero(n.dotProduct(dir));
+
+        //ray is lying in the plane axis
+        if (isZero(ndir)) {
+            return null;
+        }
+        double t = alignZero(nhead_q / ndir);
+        if (t <= 0) {
+            return null;
+        }
+        return List.of(ray.getPoint(t));
+    }
 }

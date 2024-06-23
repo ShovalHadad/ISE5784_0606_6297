@@ -35,8 +35,8 @@ public abstract class Geometry extends Intersectable {
         return this;
     }
 
-    @Override
-    public List<Point> findIntersections(Ray ray) {
-        return super.findIntersections(ray);
-    }
+//    @Override
+//    public List<Point> findIntersections(Ray ray) {
+//        return super.findIntersections(ray);
+//    }
 }

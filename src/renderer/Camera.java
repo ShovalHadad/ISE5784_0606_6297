@@ -73,7 +73,7 @@ public class Camera implements Cloneable {
         if (this.imageWriter == null)
             throw new UnsupportedOperationException("Missing imageWriter");
         if (this.rayTracer == null)
-            throw new UnsupportedOperationException("Missing rayTracerBase");
+            throw new UnsupportedOperationException("Missing rayTracer");
 
         for (int i = 0; i < this.imageWriter.getNx(); i++) {
             for (int j = 0; j < this.imageWriter.getNy(); j++) {
@@ -213,6 +213,9 @@ public class Camera implements Cloneable {
          * @return this
          */
         public Builder setImageWriter(ImageWriter imageWriter) {
+            if (imageWriter == null) {
+                throw new IllegalArgumentException("imageWriter cannot be null");
+            }
             camera.imageWriter = imageWriter;
             return this;
         }
@@ -223,6 +226,9 @@ public class Camera implements Cloneable {
          * @return this
          */
         public Builder setRayTracer(RayTracerBase rayTracer) {
+            if (rayTracer == null) {
+                throw new IllegalArgumentException("rayTracer cannot be null");
+            }
             camera.rayTracer = rayTracer;
             return this;
         }

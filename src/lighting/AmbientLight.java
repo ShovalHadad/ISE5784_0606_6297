@@ -6,8 +6,7 @@ import primitives.*;
  * Ambient Light Class
  * for all object in 3D space
  */
-public class AmbientLight {
-    private final Color intensity;
+public class AmbientLight extends Light {
 
     /**
      * Field that initialized to the color black
@@ -22,7 +21,7 @@ public class AmbientLight {
      * @param Ka - Light factor
      */
     public AmbientLight(Color Ia, Double3 Ka) {
-        this.intensity = Ia.scale(Ka);
+        super(Ia.scale(Ka));
     }
 
     /**
@@ -33,14 +32,8 @@ public class AmbientLight {
      * @param Kad - Light factor in Double type
      */
     public AmbientLight(Color Ia, double Kad) {
-        this.intensity = Ia.scale(Kad);
+        super(Ia.scale(Kad));
     }
 
-    /**
-     * returns the intensity
-     * @return Color
-     */
-    public Color getIntensity() {
-        return intensity;
-    }
+
 }

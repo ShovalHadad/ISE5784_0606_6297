@@ -34,7 +34,7 @@ public class Geometries extends Intersectable {
     }
 
     @Override
-    public List<GeoPoint> findGeoIntersectionsHelper(Ray ray) {
+    protected List<GeoPoint> findGeoIntersectionsHelper(Ray ray) {
         // returns the list of the geometries that intersect with the ray (input)
         List<GeoPoint> resultOfIntersections = null;
         //for (Intersectable geometry : scene.geometries) {
