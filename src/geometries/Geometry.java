@@ -8,6 +8,7 @@ import java.util.List;
  */
 public abstract class Geometry extends Intersectable {
     protected Color emission = Color.BLACK;
+    private Material material = new Material();
 
     /**
      * return a normal vector from point
@@ -26,6 +27,14 @@ public abstract class Geometry extends Intersectable {
     }
 
     /**
+     * returns the material
+     * @return material
+     */
+    public Material getMaterial(){
+        return material;
+    }
+
+    /**
      * set emission
      * @param emission input
      * @return this Geometry
@@ -34,6 +43,17 @@ public abstract class Geometry extends Intersectable {
         this.emission = emission;
         return this;
     }
+
+    /**
+     * set material
+     * @param material input
+     * @return this
+     */
+    public Geometry setMaterial(Material material){
+        this.material = material;
+        return this;
+    }
+
 
 //    @Override
 //    public List<Point> findIntersections(Ray ray) {

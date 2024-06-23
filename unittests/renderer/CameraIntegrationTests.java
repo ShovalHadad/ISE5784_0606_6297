@@ -45,29 +45,34 @@ class CameraIntegrationTests {
     @Test
     void testSphereIntersections() {
         Camera camera = setupCamera(Point.ZERO);
-        Sphere sphere = new Sphere(1, new Point(0, 0, -3));
 
+        //TC01: Sphere r=1 (2 intersections)
+        Sphere sphere = new Sphere(1, new Point(0, 0, -3));
         assertEquals(2,
                 countIntersections(camera, sphere, 3, 3),
                 "Wrong number of intersections with the sphere");
 
+        //TC02: Sphere r=0.5 (0 intersections)
         sphere = new Sphere(0.5, new Point(0, 0, 1));
         assertEquals(0,
                 countIntersections(camera, sphere, 3, 3),
                 "Wrong number of intersections with the sphere");
 
+        //TC03: Sphere r=2.5 (18 intersections)
         sphere = new Sphere(2.5, new Point(0, 0, -2.5));
         camera = setupCamera(new Point(0, 0, 0.5));
         assertEquals(18,
                 countIntersections(camera, sphere, 3, 3),
                 "Wrong number of intersections with the sphere");
 
+        //TC04: Sphere r=2 (10 intersections)
         sphere = new Sphere(2, new Point(0, 0, -2));
         camera = setupCamera(new Point(0, 0, 0.5));
         assertEquals(10,
                 countIntersections(camera, sphere, 3, 3),
                 "Wrong number of intersections with the sphere");
 
+        //TC05: Sphere r=4 (9 intersections)
         sphere = new Sphere(4, new Point(0, 0, 1));
         assertEquals(9,
                 countIntersections(camera, sphere, 3, 3),
@@ -79,21 +84,31 @@ class CameraIntegrationTests {
      */
     @Test
     void testPlaneIntersections() {
-        Camera camera = setupCamera(Point.ZERO);
+     Camera camera = setupCamera(Point.ZERO);
+
+        //TC01: The plane parallel to the View Plane (9 intersections)
         Plane plane = new Plane(new Point(0, 0, -3), new Vector(0, 0, 1));
         assertEquals(9,
                 countIntersections(camera, plane, 3, 3),
                 "Wrong number of intersections with the plane");
 
+        //TC02: Diagonal plane to the View Plane (9 intersections)
         plane = new Plane(new Point(0, 0, -0.5), new Vector(0, 0, 1));
         assertEquals(9,
                 countIntersections(camera, plane, 3, 3),
                 "Wrong number of intersections with the plane");
 
+        //TC03: Diagonal plane with an obtuse angle to the View Plane (6 intersections)
         plane = new Plane(new Point(0, 0, -2), new Vector(1, 1, 1));
         assertEquals(6,
                 countIntersections(camera, plane, 3, 3),
                 "Wrong number of intersections with the plane");
+
+        // TC04:The plane behind the view plane (0 intersections)
+        plane = new Plane(new Point(0, 0, 4), new Vector(0, 0, -1));
+        assertEquals(0,
+                countIntersections(camera, plane, 3, 3),
+                "Bad number of intersections");
 
     }
 
@@ -103,15 +118,17 @@ class CameraIntegrationTests {
     @Test
     void testTriangleIntersections() {
         Camera camera = setupCamera(Point.ZERO);
+
+        //TC01: Small triangle (1 intersection)
         Triangle triangle = new Triangle(
                 new Point(0, 1, -2),
                 new Point(1, -1, -2),
                 new Point(-1, -1, -2));
-
         assertEquals(1,
                 countIntersections(camera, triangle, 3, 3),
                 "Wrong number of intersections with the triangle");
 
+        //TC02: Large triangle (2 intersection)
         triangle = new Triangle(
                 new Point(0, 20, -2),
                 new Point(1, -1, -2),
