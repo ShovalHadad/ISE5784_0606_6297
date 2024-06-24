@@ -8,7 +8,7 @@ import scene.Scene;
  * An abstract class for combining a scene and its color
  */
 public abstract class RayTracerBase {
-    protected Scene scene;
+    protected final Scene scene;
 
     /**
      * abstract method

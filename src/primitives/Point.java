@@ -52,9 +52,6 @@ public class Point {
      * @return vector
      */
     public Vector subtract(Point point) {
-        if ((this.xyz.subtract(point.xyz)).equals(Double3.ZERO)) {
-            throw new IllegalArgumentException("Resulting vector cannot be zero");
-        }
         return new Vector(this.xyz.subtract(point.xyz));
     }
 
@@ -97,6 +94,11 @@ public class Point {
         if (obj == null || getClass() != obj.getClass()) return false;
         Point point = (Point) obj;
         return this.xyz.equals(point.xyz);
+    }
+
+    @Override
+    public int hashCode() {
+        return xyz.hashCode();
     }
 
     @Override

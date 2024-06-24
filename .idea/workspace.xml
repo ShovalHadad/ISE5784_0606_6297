@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5b2b54a-d520-461a-a30d-1ed7389f1e86" name="Changes" comment="stage 6 complete">
+    <list default="true" id="f5b2b54a-d520-461a-a30d-1ed7389f1e86" name="Changes" comment="stage 7 part 1 completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lighting/DirectionalLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/DirectionalLight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/geometries/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Cylinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/geometries/Tube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Tube.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lighting/SpotLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/SpotLight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primitives/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Material.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primitives/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primitives/Ray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Ray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primitives/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Vector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/Camera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/RayTracerBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/RayTracerBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/SimpleRayTracer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/SimpleRayTracer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,6 +115,16 @@
     "JUnit.PolygonTests.testGetNormal.executor": "Run",
     "JUnit.RayTests.testFindClosestPoint.executor": "Run",
     "JUnit.RayTests.testGetPoint.executor": "Run",
+    "JUnit.ReflectionRefractionTests.charmingHouseWithRedRoof.executor": "Run",
+    "JUnit.ReflectionRefractionTests.charmingHouseWithSun.executor": "Run",
+    "JUnit.ReflectionRefractionTests.christmasTreeWithDecorations.executor": "Run",
+    "JUnit.ReflectionRefractionTests.clownScene.executor": "Run",
+    "JUnit.ReflectionRefractionTests.customScene.executor": "Run",
+    "JUnit.ReflectionRefractionTests.executor": "Run",
+    "JUnit.ReflectionRefractionTests.smallHouseInGreenGarden.executor": "Run",
+    "JUnit.ReflectionRefractionTests.stars_galgsy.executor": "Run",
+    "JUnit.ReflectionRefractionTests.trianglesTransparentSphere.executor": "Run",
+    "JUnit.ReflectionRefractionTests.twoSpheres.executor": "Run",
     "JUnit.RenderTests.basicRenderXml.executor": "Run",
     "JUnit.RenderTests.executor": "Run",
     "JUnit.RenderTests.renderMultiColorTest.executor": "Run",
@@ -142,7 +160,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/USER/Downloads/ISE5784_4171_0954-PR06",
+    "last_opened_file_path": "C:/Users/USER/Downloads/ISE5784_4171_0954-PR07",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -171,7 +189,7 @@
       <recent name="geometries" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ShadowTests.sphereTriangleSpot2">
+  <component name="RunManager" selected="JUnit.ReflectionRefractionTests.christmasTreeWithDecorations">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ISE5784_0606_6297" />
@@ -182,7 +200,7 @@
     <configuration name="Unnamed" type="CompoundRunConfigurationType">
       <method v="2" />
     </configuration>
-    <configuration name="ShadowTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReflectionRefractionTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
       <extension name="coverage">
         <pattern>
@@ -191,13 +209,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="renderer" />
-      <option name="MAIN_CLASS_NAME" value="renderer.ShadowTests" />
+      <option name="MAIN_CLASS_NAME" value="renderer.ReflectionRefractionTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShadowTests.sphereTriangleMove1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReflectionRefractionTests.christmasTreeWithDecorations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
       <extension name="coverage">
         <pattern>
@@ -206,14 +224,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="renderer" />
-      <option name="MAIN_CLASS_NAME" value="renderer.ShadowTests" />
-      <option name="METHOD_NAME" value="sphereTriangleMove1" />
+      <option name="MAIN_CLASS_NAME" value="renderer.ReflectionRefractionTests" />
+      <option name="METHOD_NAME" value="christmasTreeWithDecorations" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShadowTests.sphereTriangleMove2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReflectionRefractionTests.clownScene" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
       <extension name="coverage">
         <pattern>
@@ -222,14 +240,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="renderer" />
-      <option name="MAIN_CLASS_NAME" value="renderer.ShadowTests" />
-      <option name="METHOD_NAME" value="sphereTriangleMove2" />
+      <option name="MAIN_CLASS_NAME" value="renderer.ReflectionRefractionTests" />
+      <option name="METHOD_NAME" value="clownScene" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShadowTests.sphereTriangleSpot1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReflectionRefractionTests.customScene" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
       <extension name="coverage">
         <pattern>
@@ -238,14 +256,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="renderer" />
-      <option name="MAIN_CLASS_NAME" value="renderer.ShadowTests" />
-      <option name="METHOD_NAME" value="sphereTriangleSpot1" />
+      <option name="MAIN_CLASS_NAME" value="renderer.ReflectionRefractionTests" />
+      <option name="METHOD_NAME" value="customScene" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShadowTests.sphereTriangleSpot2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReflectionRefractionTests.stars_galgsy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
       <extension name="coverage">
         <pattern>
@@ -254,8 +272,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="renderer" />
-      <option name="MAIN_CLASS_NAME" value="renderer.ShadowTests" />
-      <option name="METHOD_NAME" value="sphereTriangleSpot2" />
+      <option name="MAIN_CLASS_NAME" value="renderer.ReflectionRefractionTests" />
+      <option name="METHOD_NAME" value="stars_galgsy" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -264,19 +282,19 @@
     <list>
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="Compound.Unnamed" />
-      <item itemvalue="JUnit.ShadowTests" />
-      <item itemvalue="JUnit.ShadowTests.sphereTriangleMove1" />
-      <item itemvalue="JUnit.ShadowTests.sphereTriangleMove2" />
-      <item itemvalue="JUnit.ShadowTests.sphereTriangleSpot1" />
-      <item itemvalue="JUnit.ShadowTests.sphereTriangleSpot2" />
+      <item itemvalue="JUnit.ReflectionRefractionTests" />
+      <item itemvalue="JUnit.ReflectionRefractionTests.customScene" />
+      <item itemvalue="JUnit.ReflectionRefractionTests.stars_galgsy" />
+      <item itemvalue="JUnit.ReflectionRefractionTests.christmasTreeWithDecorations" />
+      <item itemvalue="JUnit.ReflectionRefractionTests.clownScene" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ShadowTests.sphereTriangleSpot2" />
-        <item itemvalue="JUnit.ShadowTests.sphereTriangleSpot1" />
-        <item itemvalue="JUnit.ShadowTests.sphereTriangleMove1" />
-        <item itemvalue="JUnit.ShadowTests.sphereTriangleMove2" />
-        <item itemvalue="JUnit.ShadowTests" />
+        <item itemvalue="JUnit.ReflectionRefractionTests.christmasTreeWithDecorations" />
+        <item itemvalue="JUnit.ReflectionRefractionTests.customScene" />
+        <item itemvalue="JUnit.ReflectionRefractionTests.clownScene" />
+        <item itemvalue="JUnit.ReflectionRefractionTests.stars_galgsy" />
+        <item itemvalue="JUnit.ReflectionRefractionTests" />
       </list>
     </recent_temporary>
   </component>
@@ -457,7 +475,23 @@
       <option name="project" value="LOCAL‎" />
       <updated>1719240519092</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL‎-00022" summary="stage 6 complete">
+      <option name="closed" value="true" />
+      <created>1719248546738</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL‎-00022" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1719248546738</updated>
+    </task>
+    <task id="LOCAL‎-00023" summary="stage 7 part 1 completed">
+      <option name="closed" value="true" />
+      <created>1719248591871</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL‎-00023" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1719248591871</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -486,15 +520,18 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/lighting/AmbientLight.java&#10;#&#9;src/primitives/Color.java&#10;#&#9;src/primitives/Ray.java&#10;#&#9;src/renderer/RayTracerBase.java&#10;#&#9;src/renderer/SimpleRayTracer.java&#10;#&#9;unittests/primitives/RayTests.java&#10;#&#9;unittests/renderer/CameraIntegrationTests.java&#10;#&#9;unittests/renderer/CameraTests.java&#10;#&#9;unittests/renderer/RenderTests.java" />
     <MESSAGE value="stage 6 finnish" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/renderer/SimpleRayTracer.java&#10;#&#9;unittests/renderer/RenderTests.java" />
+    <MESSAGE value="stage 7 part 1 complete" />
     <MESSAGE value="stage 6 complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="stage 6 complete" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/renderer/SimpleRayTracer.java" />
+    <MESSAGE value="stage 7 part 1 completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="stage 7 part 1 completed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/geometries/Tube.java</url>
-          <line>100</line>
+          <line>176</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>

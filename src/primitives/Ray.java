@@ -5,11 +5,14 @@ import geometries.Intersectable.GeoPoint;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Ray class
  */
 public class Ray {
+    private static final double DELTA = 0.1;
+
     final Vector direction;
     final Point head;
 
@@ -22,6 +25,19 @@ public class Ray {
     public Ray(Vector v, Point p) {
         direction = v.normalize();
         head = p;
+    }
+
+    /**
+     * Constructor to initialize ray
+     *
+     * @param p  point of the ray
+     * @param n   normal vector
+     * @param dir direction vector of the ray
+     */
+    public Ray(Vector dir, Point p ,Vector n) {
+        double delta = dir.dotProduct(n) >= 0 ? DELTA : -DELTA;
+        head = p.add(n.scale(delta));
+        direction = dir;
     }
 
     /**
@@ -66,6 +82,10 @@ public class Ray {
         return "\nRay = Head - " + head.toString() + "Direction - " + direction.toString();
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(head, direction);
+    }
     //    /**
 //     * returns the closest point to the head of ray
 //     * @param points list of points

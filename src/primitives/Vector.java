@@ -11,13 +11,10 @@ public class Vector extends Point {
      * @param z
      */
     public Vector(double x, double y, double z) {
-//        if (x == 0 && y == 0 && z == 0) {
-//            throw new IllegalArgumentException("Cannot be zero vector (0,0,0)");
-//        }
+        super(x, y, z);
         if (Util.isZero(x) && Util.isZero(y) && Util.isZero(z)) {
             throw new IllegalArgumentException("Cannot be zero vector (0,0,0)");
         }
-        super(x, y, z);
     }
 
     /**
@@ -25,10 +22,10 @@ public class Vector extends Point {
      * @param xyz
      */
     public Vector(Double3 xyz) {
+        super(xyz);
         if (xyz.equals(Double3.ZERO)) {
             throw new IllegalArgumentException("Cannot be zero vector (0,0,0)");
         }
-        super(xyz);
     }
 
     /**
@@ -72,7 +69,8 @@ public class Vector extends Point {
      * @return Vector
      */
     public Vector crossProduct(Vector v) {
-        return new Vector(((xyz.d2 * v.xyz.d3) - (xyz.d3 * v.xyz.d2)),
+        return new Vector(
+                ((xyz.d2 * v.xyz.d3) - (xyz.d3 * v.xyz.d2)),
                 ((xyz.d3 * v.xyz.d1) - (xyz.d1 * v.xyz.d3)),
                 ((xyz.d1 * v.xyz.d2) - (xyz.d2 * v.xyz.d1)));
     }
@@ -98,7 +96,7 @@ public class Vector extends Point {
 
     /**
      * add a vector to a vector
-     * @param vector
+     * @param vector input
      * @return vector
      */
     public Vector add(Vector vector) {
@@ -107,8 +105,8 @@ public class Vector extends Point {
 
     @Override
     public boolean equals(Object obj) {
-        if (!super.equals(obj)) return false;
-        return obj instanceof Vector;
+        if (this == obj) return true;
+        return obj instanceof Vector && super.equals(obj);
     }
 
     @Override
