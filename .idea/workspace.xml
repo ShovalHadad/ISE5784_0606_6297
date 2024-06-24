@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5b2b54a-d520-461a-a30d-1ed7389f1e86" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/lighting/AmbientLight.java&#10;#&#9;src/primitives/Color.java&#10;#&#9;src/primitives/Ray.java&#10;#&#9;src/renderer/RayTracerBase.java&#10;#&#9;src/renderer/SimpleRayTracer.java&#10;#&#9;unittests/primitives/RayTests.java&#10;#&#9;unittests/renderer/CameraIntegrationTests.java&#10;#&#9;unittests/renderer/CameraTests.java&#10;#&#9;unittests/renderer/RenderTests.java">
-      <change afterPath="$PROJECT_DIR$/src/primitives/Material.java" afterDir="false" />
+    <list default="true" id="f5b2b54a-d520-461a-a30d-1ed7389f1e86" name="Changes" comment="stage 6 complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometries/Geometry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Geometry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lighting/AmbientLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/AmbientLight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lighting/DirectionalLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/DirectionalLight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lighting/Light.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/Light.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lighting/LightSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/LightSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lighting/PointLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/PointLight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lighting/SpotLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/SpotLight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/SimpleRayTracer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/SimpleRayTracer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scene/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scene/Scene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unittests/renderer/CameraIntegrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/CameraIntegrationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unittests/renderer/CameraIntegrationsTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/unittests/renderer/RenderTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/RenderTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +111,11 @@
     "JUnit.RenderTests.executor": "Run",
     "JUnit.RenderTests.renderMultiColorTest.executor": "Run",
     "JUnit.RenderTests.renderTwoColorTest.executor": "Run",
+    "JUnit.ShadowTests.executor": "Run",
+    "JUnit.ShadowTests.sphereTriangleMove1.executor": "Run",
+    "JUnit.ShadowTests.sphereTriangleMove2.executor": "Run",
+    "JUnit.ShadowTests.sphereTriangleSpot1.executor": "Run",
+    "JUnit.ShadowTests.sphereTriangleSpot2.executor": "Run",
     "JUnit.SphereTests.executor": "Run",
     "JUnit.SphereTests.findIntsersectionsTest.executor": "Run",
     "JUnit.SphereTests.testConstructor.executor": "Run",
@@ -177,7 +171,7 @@
       <recent name="geometries" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LightsTests">
+  <component name="RunManager" selected="JUnit.ShadowTests.sphereTriangleSpot2">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ISE5784_0606_6297" />
@@ -188,80 +182,80 @@
     <configuration name="Unnamed" type="CompoundRunConfigurationType">
       <method v="2" />
     </configuration>
-    <configuration name="LightsTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShadowTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lighting.*" />
+          <option name="PATTERN" value="renderer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="lighting" />
-      <option name="MAIN_CLASS_NAME" value="lighting.LightsTests" />
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.ShadowTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LightsTests.sphereMultipleLights" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShadowTests.sphereTriangleMove1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lighting.*" />
+          <option name="PATTERN" value="renderer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="lighting" />
-      <option name="MAIN_CLASS_NAME" value="lighting.LightsTests" />
-      <option name="METHOD_NAME" value="sphereMultipleLights" />
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.ShadowTests" />
+      <option name="METHOD_NAME" value="sphereTriangleMove1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LightsTests.sphereSpotSharp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShadowTests.sphereTriangleMove2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lighting.*" />
+          <option name="PATTERN" value="renderer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="lighting" />
-      <option name="MAIN_CLASS_NAME" value="lighting.LightsTests" />
-      <option name="METHOD_NAME" value="sphereSpotSharp" />
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.ShadowTests" />
+      <option name="METHOD_NAME" value="sphereTriangleMove2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LightsTests.trianglesMultipleLights" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShadowTests.sphereTriangleSpot1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lighting.*" />
+          <option name="PATTERN" value="renderer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="lighting" />
-      <option name="MAIN_CLASS_NAME" value="lighting.LightsTests" />
-      <option name="METHOD_NAME" value="trianglesMultipleLights" />
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.ShadowTests" />
+      <option name="METHOD_NAME" value="sphereTriangleSpot1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LightsTests.trianglesSpotSharp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShadowTests.sphereTriangleSpot2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lighting.*" />
+          <option name="PATTERN" value="renderer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="lighting" />
-      <option name="MAIN_CLASS_NAME" value="lighting.LightsTests" />
-      <option name="METHOD_NAME" value="trianglesSpotSharp" />
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.ShadowTests" />
+      <option name="METHOD_NAME" value="sphereTriangleSpot2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -270,19 +264,19 @@
     <list>
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="Compound.Unnamed" />
-      <item itemvalue="JUnit.LightsTests.sphereMultipleLights" />
-      <item itemvalue="JUnit.LightsTests.trianglesMultipleLights" />
-      <item itemvalue="JUnit.LightsTests.trianglesSpotSharp" />
-      <item itemvalue="JUnit.LightsTests" />
-      <item itemvalue="JUnit.LightsTests.sphereSpotSharp" />
+      <item itemvalue="JUnit.ShadowTests" />
+      <item itemvalue="JUnit.ShadowTests.sphereTriangleMove1" />
+      <item itemvalue="JUnit.ShadowTests.sphereTriangleMove2" />
+      <item itemvalue="JUnit.ShadowTests.sphereTriangleSpot1" />
+      <item itemvalue="JUnit.ShadowTests.sphereTriangleSpot2" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LightsTests" />
-        <item itemvalue="JUnit.LightsTests.trianglesMultipleLights" />
-        <item itemvalue="JUnit.LightsTests.sphereMultipleLights" />
-        <item itemvalue="JUnit.LightsTests.sphereSpotSharp" />
-        <item itemvalue="JUnit.LightsTests.trianglesSpotSharp" />
+        <item itemvalue="JUnit.ShadowTests.sphereTriangleSpot2" />
+        <item itemvalue="JUnit.ShadowTests.sphereTriangleSpot1" />
+        <item itemvalue="JUnit.ShadowTests.sphereTriangleMove1" />
+        <item itemvalue="JUnit.ShadowTests.sphereTriangleMove2" />
+        <item itemvalue="JUnit.ShadowTests" />
       </list>
     </recent_temporary>
   </component>
@@ -439,7 +433,31 @@
       <option name="project" value="LOCAL‎" />
       <updated>1719165313180</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL‎-00019" summary="stage 6 finnish">
+      <option name="closed" value="true" />
+      <created>1719240342378</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL‎-00019" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1719240342378</updated>
+    </task>
+    <task id="LOCAL‎-00020" summary="stage 6 finnish">
+      <option name="closed" value="true" />
+      <created>1719240414549</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL‎-00020" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1719240414549</updated>
+    </task>
+    <task id="LOCAL‎-00021" summary="stage 6 complete">
+      <option name="closed" value="true" />
+      <created>1719240519092</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL‎-00021" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1719240519092</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -466,7 +484,10 @@
     <MESSAGE value="6.1-not good (test poly and tri &amp; color)" />
     <MESSAGE value="stage 6.1 - finnish" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/lighting/AmbientLight.java&#10;#&#9;src/primitives/Color.java&#10;#&#9;src/primitives/Ray.java&#10;#&#9;src/renderer/RayTracerBase.java&#10;#&#9;src/renderer/SimpleRayTracer.java&#10;#&#9;unittests/primitives/RayTests.java&#10;#&#9;unittests/renderer/CameraIntegrationTests.java&#10;#&#9;unittests/renderer/CameraTests.java&#10;#&#9;unittests/renderer/RenderTests.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/lighting/AmbientLight.java&#10;#&#9;src/primitives/Color.java&#10;#&#9;src/primitives/Ray.java&#10;#&#9;src/renderer/RayTracerBase.java&#10;#&#9;src/renderer/SimpleRayTracer.java&#10;#&#9;unittests/primitives/RayTests.java&#10;#&#9;unittests/renderer/CameraIntegrationTests.java&#10;#&#9;unittests/renderer/CameraTests.java&#10;#&#9;unittests/renderer/RenderTests.java" />
+    <MESSAGE value="stage 6 finnish" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/renderer/SimpleRayTracer.java&#10;#&#9;unittests/renderer/RenderTests.java" />
+    <MESSAGE value="stage 6 complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="stage 6 complete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

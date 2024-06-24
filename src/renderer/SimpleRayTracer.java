@@ -1,10 +1,11 @@
 package renderer;
-
+import geometries.Intersectable.GeoPoint;
 import geometries.Intersectable;
 import lighting.LightSource;
 import primitives.*;
 import scene.Scene;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import static primitives.Util.alignZero;
@@ -13,16 +14,19 @@ import static primitives.Util.alignZero;
  * A class that inherits from the RayTracerBase class and implements the method
  */
 public class SimpleRayTracer extends RayTracerBase {
+    /**
+     * Ray head offset size for shading rays
+     */
+    private static final double DELTA = 0.1;
 
     /**
-     * constructor
+     * constructor with parameters
      *
      * @param scene A scene where the department is initialized
      */
     public SimpleRayTracer(Scene scene) {
         super(scene);
     }
-
 
     /**
      * Get the color of an intersection point
@@ -31,7 +35,7 @@ public class SimpleRayTracer extends RayTracerBase {
      * @param ray for the ray
      * @return Color of the intersection point
      */
-    private Color calcColor(Intersectable.GeoPoint point, Ray ray) {
+    private Color calcColor(GeoPoint point, Ray ray) {
         return this.scene.ambientLight.getIntensity()
                 .add(point.geometry.getEmission())
                 .add(calcLocalEffects(point, ray));
@@ -39,7 +43,6 @@ public class SimpleRayTracer extends RayTracerBase {
 
     @Override
     public Color traceRay(Ray ray) {
-
         var intersections = this.scene.geometries.findGeoIntersections(ray);
         return intersections == null
                 ? this.scene.background
@@ -49,11 +52,11 @@ public class SimpleRayTracer extends RayTracerBase {
     /**
      * This method calculates the local effects (diffuse and specular) of lighting at a given intersection point.
      *
-     * @param intersection The intersection point and geometry information.
+     * @param intersection The intersection geoPoint.
      * @param ray The ray that intersects with the geometry.
      * @return The color result of local lighting effects.
      */
-    private Color calcLocalEffects(Intersectable.GeoPoint intersection, Ray ray) {
+    private Color calcLocalEffects(GeoPoint intersection, Ray ray) {
 
         Vector v = ray.getDirection();
         Vector n = intersection.geometry.getNormal(intersection.point);
@@ -71,13 +74,45 @@ public class SimpleRayTracer extends RayTracerBase {
             Vector l = lightSource.getL(intersection.point);
             double nl = alignZero(n.dotProduct(l));
 
-            if (nl * nv > 0) { // sign(nl) == sing(nv)
+            if (nl * nv > 0  && unshaded(intersection,lightSource, l, n, nl)) { // sign(nl) == sing(nv)
                 Color lightIntensity = lightSource.getIntensity(intersection.point);
                 color = color.add(calcDiffusive(kd, l, n, lightIntensity),
                         calcSpecular(ks, l, n, v, nShininess, lightIntensity));
             }
         }
         return color;
+    }
+
+    /**
+     * checks if the point is shaded or not
+     * @param gp The intersection geoPoint.
+     * @param l vector
+     * @param n vector
+     * @return true / false
+     */
+    private boolean unshaded(GeoPoint gp, LightSource light, Vector l, Vector n, double nl) {
+        Vector lightDirection = l.scale(-1); // from point to light source
+        Vector epsVector = n.scale(nl < 0 ? DELTA : -DELTA);
+        Point point = gp.point.add(epsVector);
+        Ray ray = new Ray(lightDirection, point);
+
+        List<GeoPoint> intersections = scene.geometries.findGeoIntersections(ray);
+        if (intersections == null) return true;
+
+        double lightDistance = light.getDistance(gp.point);
+
+        intersections = filterIntersections(intersections, ray.getHead(), lightDistance);
+        return intersections.isEmpty();
+    }
+
+    private List<GeoPoint> filterIntersections(List<GeoPoint> intersections, Point head, double distance) {
+        List<GeoPoint> filtered = new LinkedList<>();
+        for (GeoPoint intersection : intersections) {
+            if (intersection.point.distance(head) < distance) {
+                filtered.add(intersection);
+            }
+        }
+        return filtered;
     }
 
     /**
