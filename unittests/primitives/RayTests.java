@@ -16,9 +16,9 @@ class RayTests {
      */
     @Test
     void testGetPoint() {
-        Ray ray1 = new Ray(new Vector(1, 0, 0), new Point(0, 0, 0));
-        Ray ray2 = new Ray(new Vector(1, 0, 0), new Point(0, 0, 0));
-        Ray ray3 = new Ray(new Vector(1, 0, 0), new Point(0, 0, 0));
+        Ray ray1 = new Ray(new Point(0, 0, 0), new Vector(1, 0, 0));
+        Ray ray2 = new Ray(new Point(0, 0, 0), new Vector(1, 0, 0));
+        Ray ray3 = new Ray(new Point(0, 0, 0), new Vector(1, 0, 0));
 
         // =============== Boundary Values Tests ==================
         // Test Negative distance
@@ -57,17 +57,17 @@ class RayTests {
         // ============ Equivalence Partitions Tests ==============
         //TC01: The closest point is in the middle of the list
         assertEquals(p2,
-                (new Ray(vector, new Point(2, 2.5, 2))).findClosestPoint(points),
+                (new Ray(new Point(2, 2.5, 2), vector)).findClosestPoint(points),
                 "The point in the middle");
 
         // =============== Boundary Values Tests ==================
         //TC02: The closest point is the first point in the list
         assertEquals(p1,
-                (new Ray(vector, new Point(1, 1.25, 1))).findClosestPoint(points),
+                (new Ray(new Point(1, 1.25, 1), vector)).findClosestPoint(points),
                 "The point is the first one");
 
         //TC03: The closest point is the last point in the list
-        Ray ray = new Ray(vector, new Point(3, 3.5, 3));
+        Ray ray = new Ray(new Point(3, 3.5, 3), vector);
         assertEquals(p3, ray.findClosestPoint(points),
                 "The point is the last one");
 

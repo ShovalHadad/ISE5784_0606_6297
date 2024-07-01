@@ -12,8 +12,8 @@ public class Sphere extends RadialGeometry {
     /**
      * constructor
      *
-     * @param radius
-     * @param center
+     * @param radius input
+     * @param center input
      */
     public Sphere(double radius, Point center) {
         super(radius);

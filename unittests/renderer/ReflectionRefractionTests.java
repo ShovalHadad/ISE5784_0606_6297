@@ -9,6 +9,8 @@ import lighting.*;
 import primitives.*;
 import scene.Scene;
 
+import java.util.List;
+
 /** Tests for reflection and transparency functionality, test for partial
  * shadows
  * (with transparency)
@@ -98,8 +100,9 @@ public class ReflectionRefractionTests {
          .writeToImage();
    }
 
-
-
+/**
+ * Christmas Tree Photo
+ */
 
 /**
  * Christmas Tree Photo
@@ -123,6 +126,7 @@ public class ReflectionRefractionTests {
       // Define the geometries for the Christmas tree
       scene.setBackground(new Color(lightGray));
       scene.geometries.add(
+
               //The Christmas Tree:
               //first tree level
               new Triangle(new Point(-50, 80, 0), new Point(50, 80, 0), new Point(0, 160, 0))
@@ -139,7 +143,7 @@ public class ReflectionRefractionTests {
                       .setEmission(new Color(18, 138, 45))
                       .setMaterial(new Material().setKd(0.6).setKs(0.1).setShininess(100).setKr(0)),
 
-              new Cylinder(10, new Ray(new Vector(0,-1,0),new Point(0, -90, -30)),100)
+              new Cylinder(10, new Ray(new Point(0, -90, -30), new Vector(0,-1,0)),100)
                       .setEmission(new Color(112, 76, 4))
                       .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
 
@@ -152,6 +156,9 @@ public class ReflectionRefractionTests {
                       .setEmission(new Color(YELLOW))
                       .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100)),
               //The Star:
+             // star(0, 190, 0,30,40),
+
+
               new Triangle(p1, p2, p6).setEmission(new Color(YELLOW))
                       .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
               new Triangle(p2, p3, p6).setEmission(new Color(YELLOW))
@@ -342,11 +349,293 @@ public class ReflectionRefractionTests {
               .setkL(0.0001).setkQ(0.000005));
 
       // Camera settings
-      cameraBuilder.setLocation(new Point(0, 0, 500)).setVpDistance(500)
+      cameraBuilder.setLocation(new Point(30, -300, 500)).setVpDistance(80)
               .setVpSize(200, 200)
-              .setImageWriter(new ImageWriter("customSceneImage", 600, 600))
+              .setImageWriter(new ImageWriter("customSceneImage2", 600, 600))
               .build()
               .renderImage()
               .writeToImage();
    }
+
+
+
+
+   private Intersectable star(double x, double y, double z, double height, double width) {
+      // The vertices for a star
+      Point p1 = new Point(x, y, z); // top
+      Point p2 = new Point(x + (width * 0.125), y - (height * 0.5), z);
+      Point p3 = new Point(x + (width * 0.5), y - (height * 0.5), z);
+      Point p4 = new Point(x + (width * 0.225), y - (height * 0.77), z);
+      Point p5 = new Point(x + (width * 0.375), y - (height * 1.33), z);
+      Point p6 = new Point(x, y + (height * 0.25), z + 4); // center point
+      Point p7 = new Point(x - (width * 0.375), y - (height * 1.33), z);
+      Point p8 = new Point(x - (width * 0.225), y - (height * 0.77), z);
+      Point p9 = new Point(x - (width * 0.5), y - (height * 0.5), z);
+      Point p10 = new Point(x - (width * 0.125), y - (height * 0.5), z);
+      Point p11 = new Point(x, y - height, z); // bottom
+
+      return new Geometries(
+              new Triangle(p1, p2, p6).setEmission(new Color(YELLOW))
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
+              new Triangle(p2, p3, p6).setEmission(new Color(YELLOW))
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
+              new Triangle(p3, p4, p6).setEmission(new Color(YELLOW))
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
+              new Triangle(p4, p5, p6).setEmission(new Color(YELLOW))
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
+              new Triangle(p5, p11, p6).setEmission(new Color(YELLOW))
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
+              new Triangle(p11, p7, p6).setEmission(new Color(YELLOW))
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
+              new Triangle(p7, p8, p6).setEmission(new Color(YELLOW))
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
+              new Triangle(p8, p9, p6).setEmission(new Color(YELLOW))
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
+              new Triangle(p9, p10, p6).setEmission(new Color(YELLOW))
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
+              new Triangle(p10, p1, p6).setEmission(new Color(YELLOW))
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10))
+      );
+   }
+
+   private Geometries treeLeft(double x, double y, double z, double height) {
+      return new Geometries(
+              // Tree levels
+              new Triangle(new Point(x - 10, y-(height*0.25), z), new Point(x + 10, y-(height*0.25), z), new Point(x, y , z))
+                      .setEmission(new Color(4, 207, 78))
+                      .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100).setKr(0)),
+              new Triangle(new Point(x - 20, y - (height*0.6), z - 10), new Point(x + 20, y - (height*0.6), z - 10), new Point(x + 3, y-5 , z - 10))
+                      .setEmission(new Color(34, 186, 67))
+                      .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100).setKr(0)),
+              new Triangle(new Point(x - 25, y - (height*0.85), z - 20), new Point(x + 25, y - (height*0.85), z - 20), new Point(x+5, y-10 , z - 20))
+                      .setEmission(new Color(18, 138, 45))
+                      .setMaterial(new Material().setKd(0.6).setKs(0.1).setShininess(100).setKr(0)),
+              new Cylinder(5, new Ray(new Point(x+10, y - height-5, z-30), new Vector(0, 1, 0)), (height*0.20))
+                      .setEmission(new Color(112, 76, 4))
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10))
+      );
+   }
+   private Geometries treeRight(double x, double y, double z, double height) {
+      return new Geometries(
+              // Tree levels
+              new Triangle(new Point(x + 10, y - (height * 0.25), z), new Point(x - 15, y - (height * 0.25), z), new Point(x, y, z))
+                      .setEmission(new Color(4, 207, 78))
+                      .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100).setKr(0)),
+              new Triangle(new Point(x + 20, y - (height * 0.6), z - 10), new Point(x - 25, y - (height * 0.6), z - 10), new Point(x - 3, y - 5, z - 10))
+                      .setEmission(new Color(34, 186, 67))
+                      .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100).setKr(0)),
+              new Triangle(new Point(x + 20, y - (height * 0.85), z - 20), new Point(x - 35, y - (height * 0.85), z - 20), new Point(x - 5, y - 10, z - 20))
+                      .setEmission(new Color(18, 138, 45))
+                      .setMaterial(new Material().setKd(0.6).setKs(0.1).setShininess(100).setKr(0)),
+              new Cylinder(5, new Ray(new Point(x - 10, y - height - 5, z - 30), new Vector(0, 1, 0)), (height * 0.20))
+                      .setEmission(new Color(112, 76, 4))
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10))
+      );
+   }
+
+   @Test
+   public void christmasTreeWithDecorations1() {
+      // Define the geometries for the Christmas tree
+      scene.setBackground(new Color(lightGray));
+      scene.geometries.add(
+              // The Christmas Tree:
+              //first tree level
+              new Triangle(new Point(-50, 80, 0), new Point(50, 80, 0), new Point(0, 160, 0))
+                      .setEmission(new Color(4, 207, 78))
+                      .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100).setKr(0)),
+
+              //second tree level
+              new Triangle(new Point(-80, 0, -10), new Point(80, 0, -10), new Point(0, 160, -10))
+                      .setEmission(new Color(34, 186, 67))
+                      .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100).setKr(0)),
+
+              //third tree level
+              new Triangle(new Point(-110, -100, -20), new Point(110, -100, -20), new Point(0, 160, -20))
+                      .setEmission(new Color(18, 138, 45))
+                      .setMaterial(new Material().setKd(0.6).setKs(0.1).setShininess(100).setKr(0)),
+
+              new Cylinder(10, new Ray(new Point(0, -90, -30), new Vector(0,-1,0)),100)
+                      .setEmission(new Color(112, 76, 4))
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
+
+
+              //tree(0, 80, 0, 160),
+
+              // The Christmas decorations:
+              // The Star stand:
+              new Triangle(new Point(-7, 150, 1), new Point(7, 150, 1), new Point(0, 160, 1))
+                      .setEmission(new Color(YELLOW))
+                      .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100)),
+              // The Star:
+              star(0, 190, 0, 30, 40),
+
+              // The Ornaments:
+              new Sphere(5.5, new Point(21, 127, 1))
+                      .setEmission(new Color(RED))  // Red ornament
+                      .setMaterial(new Material().setKd(0.6).setKs(0.2).setShininess(10)),
+              new Sphere(5.5, new Point(5, 115, 1))
+                      .setEmission(new Color(190, 20, 100)) // Dark Pink ornament
+                      .setMaterial(new Material().setKd(0.6).setKs(0.2).setShininess(10)),
+              new Sphere(5.5, new Point(-16, 105, 1))
+                      .setEmission(new Color(235, 35, 168)) // Pink ornament
+                      .setMaterial(new Material().setKd(0.6).setKs(0.2).setShininess(10)),
+              new Sphere(5.5, new Point(-38, 95, 1))
+                      .setEmission(new Color(192, 3, 255))  // Light Purple ornament
+                      .setMaterial(new Material().setKd(0.6).setKs(0.2).setShininess(10)),
+
+              new Sphere(6, new Point(45, 70, -9))
+                      .setEmission(new Color(161, 9, 217))  // Purple ornament
+                      .setMaterial(new Material().setKd(0.5).setKs(0.2).setShininess(10)),
+              new Sphere(6, new Point(22, 55, -10))
+                      .setEmission(new Color(14, 5, 179)) // Dark Blue ornament
+                      .setMaterial(new Material().setKd(0.5).setKs(0.2).setShininess(10)),
+              new Sphere(6, new Point(-8, 40, -10))
+                      .setEmission(new Color(12, 48, 245)) // Blue ornament
+                      .setMaterial(new Material().setKd(0.5).setKs(0.2).setShininess(10)),
+              new Sphere(6, new Point(-38, 26, -10))
+                      .setEmission(new Color(50, 160, 280)) // Turquoise ornament
+                      .setMaterial(new Material().setKd(0.4).setKs(0.2).setShininess(10)),
+              new Sphere(6, new Point(-70, 15, -10))
+                      .setEmission(new Color(42, 177, 191)) // Light Turquoise ornament
+                      .setMaterial(new Material().setKd(0.4).setKs(0.2).setShininess(10)),
+
+              new Sphere(6.5, new Point(73, -15, -19))
+                      .setEmission(new Color(130, 245, 120))  // Light Green ornament
+                      .setMaterial(new Material().setKd(0.3).setKs(0.2).setShininess(10)),
+              new Sphere(6.5, new Point(35, -30, -20))
+                      .setEmission(new Color(44, 209, 64)) // Green ornament
+                      .setMaterial(new Material().setKd(0.3).setKs(0.2).setShininess(10)),
+              new Sphere(6.5, new Point(-8, -48, -20))
+                      .setEmission(new Color(51, 187, 39)) // Dark Green ornament
+                      .setMaterial(new Material().setKd(0.3).setKs(0.2).setShininess(10)),
+              new Sphere(6.5, new Point(-48, -65, -20))
+                      .setEmission(new Color(74, 252, 62)) // Light Lime Green ornament
+                      .setMaterial(new Material().setKd(0.3).setKs(0.2).setShininess(10)),
+              new Sphere(6.5, new Point(-90, -80, -20))
+                      .setEmission(new Color(82, 194, 52)) // Lime Green ornament
+                      .setMaterial(new Material().setKd(0.3).setKs(0.2).setShininess(10))
+      );
+      //Camera camera=new Camera()
+      // Adding lights
+      scene.lights.add(new SpotLight(new Color(700, 400, 400), new Point(-100, 100, 500), new Vector(1, -1, -2))
+              .setkL(4E-4).setkQ(2E-5));
+      scene.lights.add(new SpotLight(new Color(700, 400, 400), new Point(100, 100, 500), new Vector(-1, -1, -2))
+              .setkL(4E-4).setkQ(2E-5));
+
+     cameraBuilder.setLocation(new Point(0,0,500)).setVpDistance(500).setVpSize(400,400)
+             .setImageWriter(new ImageWriter("starynaith",800,800)).build().renderImage().writeToImage();
+   }
+
+   @Test
+   public void starryNight() {
+      // Define the geometries for the Christmas tree
+      scene.setBackground(new Color(15, 15, 110));
+      scene.geometries.add(
+              // The Christmas Tree:
+              //first tree level
+              new Triangle(new Point(80, -20, 0), new Point(120, -20, 0), new Point(100, 0, 0))
+                      .setEmission(new Color(4, 207, 78))
+                      .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100).setKr(0)),
+
+              //second tree level
+             new Triangle(new Point(-80, 0, -5), new Point(80, 0, -10), new Point(0, 160, -10))
+              .setEmission(new Color(34, 186, 67))
+              .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100).setKr(0)),
+
+              //third tree level
+              new Triangle(new Point(-110, -100, -20), new Point(110, -100, -20), new Point(0, 160, -20))
+                      .setEmission(new Color(18, 138, 45))
+                      .setMaterial(new Material().setKd(0.6).setKs(0.1).setShininess(100).setKr(0)),
+
+              new Cylinder(10, new Ray(new Point(0, -90, -30), new Vector(0,-1,0)),100)
+                      .setEmission(new Color(112, 76, 4))
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
+
+              treeLeft(150,5,0,100),
+              new Sphere(150, new Point(-200, -200, 0))
+                      .setEmission(new Color(115, 115, 230)) // Blue  ornament
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10).setKt(0.))
+
+      );
+      //Camera camera=new Camera()
+      // Adding lights
+      scene.lights.add(new SpotLight(new Color(700, 400, 400), new Point(-100, 100, 500), new Vector(1, -1, -2))
+              .setkL(4E-4).setkQ(2E-5));
+      scene.lights.add(new SpotLight(new Color(700, 400, 400), new Point(100, 100, 500), new Vector(-1, -1, -2))
+              .setkL(4E-4).setkQ(2E-5));
+
+     cameraBuilder.setLocation(new Point(0,0,500)).setVpDistance(500).setVpSize(400,400)
+             .setImageWriter(new ImageWriter("starryNight",800,800)).build().renderImage().writeToImage();
+   }
+
+   @Test
+   public void snowMan() {
+      // Define the geometries for the Christmas tree
+      scene.setBackground(new Color(15, 15, 110));
+      scene.geometries.add(
+              new Triangle(new Point(-200, -200, -200), new Point(210, -200, -200), new Point(0, 160, -200))
+                      .setEmission(new Color(GRAY))
+                      .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100).setKr(0)),
+              new Triangle(new Point(-200, -199, -190), new Point(150, -199, -190), new Point(0, 160, -190))
+                      .setEmission(new Color(lightGray))
+                      .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100).setKr(0)),
+
+              new Triangle(new Point(-400, -201, -300), new Point(50, -201, -300), new Point(-180, 100, -300))
+                      .setEmission(new Color(GRAY))
+                      .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100).setKr(0)),
+              new Triangle(new Point(-400, -200, -290), new Point(0, -200, -290), new Point(-180, 100, -290))
+                      .setEmission(new Color(lightGray))
+                      .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100).setKr(0)),
+
+              new Triangle(new Point(-100, -201, -280), new Point(400, -201, -280), new Point(180, 100, -280))
+                      .setEmission(new Color(GRAY))
+                      .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100).setKr(0)),
+              new Triangle(new Point(-100, -200, -270), new Point(350, -200, -270), new Point(180, 100, -270))
+                      .setEmission(new Color(lightGray))
+                      .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100).setKr(0)),
+
+              new Triangle(new Point(-30, 100, -180), new Point(22, 100, -180), new Point(0, 160, -180))
+                      .setEmission(new Color(white))
+                      .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100).setKr(0)),
+              new Triangle(new Point(-30, 100, -180), new Point(-0, 100, -180), new Point(-20, 50, -180))
+                      .setEmission(new Color(white))
+                      .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100).setKr(0)),
+              new Triangle(new Point(-0, 100, -180), new Point(22, 100, -180), new Point(15, 50, -180))
+                      .setEmission(new Color(white))
+                      .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100).setKr(0)),
+/*
+              new Sphere(35, new Point(0, 70, 0))
+                      .setEmission(new Color(211, 216, 245)) // Blue  ornament
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10).setKt(0.4)),
+              new Sphere(50, new Point(0, 0, -10))
+                      .setEmission(new Color(211, 216, 245)) // Blue  ornament
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10).setKt(0.4)),
+              new Sphere(70, new Point(0, -90, 0))
+                      .setEmission(new Color(211, 216, 245)) // Blue  ornament
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10).setKt(0.4)),
+
+              new Cylinder(10, new Ray(new Point(0, -90, -30), new Vector(0, -1, 0)), 100)
+                      .setEmission(new Color(112, 76, 4))
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
+*/
+              treeLeft(150, 5, 0, 100),
+              treeLeft(100, -15, -10, 100),
+              treeLeft(170, -25, 10, 120),
+              treeLeft(160, -40, 10, 120),
+              treeRight(-110, 5, 10, 120)
+
+      );
+      //Camera camera=new Camera()
+      // Adding lights
+      scene.lights.add(new SpotLight(new Color(700, 400, 400), new Point(-100, 100, 500), new Vector(1, -1, -2))
+              .setkL(4E-4).setkQ(2E-5));
+      scene.lights.add(new SpotLight(new Color(700, 400, 400), new Point(100, 100, 500), new Vector(-1, -1, -2))
+              .setkL(4E-4).setkQ(2E-5));
+
+      cameraBuilder.setLocation(new Point(0, 0, 500)).setVpDistance(500).setVpSize(400, 400)
+              .setImageWriter(new ImageWriter("snowMan", 800, 800)).build().renderImage().writeToImage();
+   }
+
+   
+
 }

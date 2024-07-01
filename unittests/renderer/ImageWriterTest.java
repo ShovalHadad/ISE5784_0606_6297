@@ -3,6 +3,7 @@ package renderer;
 import org.junit.jupiter.api.Test;
 import primitives.Color;
 
+import static java.awt.Color.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ImageWriterTest {
@@ -12,7 +13,11 @@ class ImageWriterTest {
         ImageWriter imageWriter = new ImageWriter("yellow", 800, 500);
         for(int i = 0; i < imageWriter.getNx(); i++){
             for(int j = 0; j< imageWriter.getNy(); j++){
-                imageWriter.writePixel(i, j ,new Color(java.awt.Color.YELLOW));
+                if(i % 50 == 0 || j % 50 == 0) {
+                    imageWriter.writePixel(i, j, new Color(RED));
+                }else {
+                    imageWriter.writePixel(i, j, new Color(YELLOW));
+                }
             }
         }
         imageWriter.writeToImage();
@@ -29,9 +34,9 @@ class ImageWriterTest {
                        ||(((i >= 300 & i < 350)||(i >= 500 & i < 550)) & (j >= 150 & j < 250))  // the eyes of smile
                || (((i >= 100 & i < 150)||(i >= 700 & i < 750)) & (j >= 150 & j < 350))  // columns 2 and 13
                ||(((i >= 250 & i < 300)||(i >= 550 & i < 600)) & (j >= 300 & j < 350))){  // line 6 (part of the smile)
-                   imageWriter.writePixel(i, j ,new Color(java.awt.Color.BLACK));
+                   imageWriter.writePixel(i, j ,new Color(BLACK));
                }else {
-                   imageWriter.writePixel(i, j, new Color(java.awt.Color.YELLOW));
+                   imageWriter.writePixel(i, j, new Color(YELLOW));
                }
             }
         }

@@ -60,7 +60,9 @@ public class LightsTests {
    /** Radius of the sphere */
    private static final double  SPHERE_RADIUS           = 50d;
 
-   /** The triangles' vertices for the tests with triangles */
+   /**
+    * The triangles' vertices for the tests with triangles
+    */
    private final Point[]        vertices                =
            {
                    // the shared left-bottom:
@@ -91,7 +93,9 @@ public class LightsTests {
    private final Geometry       triangle2               = new Triangle(vertices[0], vertices[1], vertices[3])
            .setMaterial(material);
 
-   /** Produce a picture of a sphere lighted by a directional light */
+   /**
+    * Produce a picture of a sphere lighted by a directional light
+    */
    @Test
    public void sphereDirectional() {
       scene1.geometries.add(sphere);
@@ -103,7 +107,9 @@ public class LightsTests {
               .writeToImage();
    }
 
-   /** Produce a picture of a sphere lighted by a point light */
+   /**
+    * Produce a picture of a sphere lighted by a point light
+    */
    @Test
    public void spherePoint() {
       scene1.geometries.add(sphere);
@@ -116,7 +122,9 @@ public class LightsTests {
               .writeToImage();
    }
 
-   /** Produce a picture of a sphere lighted by a spotlight */
+   /**
+    * Produce a picture of a sphere lighted by a spotlight
+    */
    @Test
    public void sphereSpot() {
       scene1.geometries.add(sphere);
@@ -141,7 +149,9 @@ public class LightsTests {
               .writeToImage();
    }
 
-   /** Produce a picture of two triangles lighted by a point light */
+   /**
+    * Produce a picture of two triangles lighted by a point light
+    */
    @Test
    public void trianglesPoint() {
       scene2.geometries.add(triangle1, triangle2);
@@ -154,7 +164,9 @@ public class LightsTests {
               .writeToImage(); //
    }
 
-   /** Produce a picture of two triangles lighted by a spotlight */
+   /**
+    * Produce a picture of two triangles lighted by a spotlight
+    */
    @Test
    public void trianglesSpot() {
       scene2.geometries.add(triangle1, triangle2);
@@ -167,7 +179,9 @@ public class LightsTests {
               .writeToImage();
    }
 
-   /** Produce a picture of a sphere lighted by a narrow spotlight */
+   /**
+    * Produce a picture of a sphere lighted by a narrow spotlight
+    */
    @Test
    public void sphereSpotSharp() {
       scene1.geometries.add(sphere);
@@ -181,7 +195,9 @@ public class LightsTests {
               .writeToImage();
    }
 
-   /** Produce a picture of two triangles lighted by a narrow spotlight */
+   /**
+    * Produce a picture of two triangles lighted by a narrow spotlight
+    */
    @Test
    public void trianglesSpotSharp() {
       scene2.geometries.add(triangle1, triangle2);
@@ -194,7 +210,9 @@ public class LightsTests {
               .writeToImage();
    }
 
-   /** Produce a picture of a sphere lighted by multiple light sources */
+   /**
+    * Produce a picture of a sphere lighted by multiple light sources
+    */
    @Test
    public void sphereMultipleLights() {
       scene1.geometries.add(sphere);
@@ -210,7 +228,9 @@ public class LightsTests {
               .writeToImage();
    }
 
-   /** Produce a picture of two triangles lighted by multiple light sources */
+   /**
+    * Produce a picture of two triangles lighted by multiple light sources
+    */
    @Test
    public void trianglesMultipleLights() {
       scene2.geometries.add(triangle1, triangle2);

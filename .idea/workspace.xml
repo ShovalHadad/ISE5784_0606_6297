@@ -4,18 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5b2b54a-d520-461a-a30d-1ed7389f1e86" name="Changes" comment="stage 7 part 1 completed">
+    <list default="true" id="f5b2b54a-d520-461a-a30d-1ed7389f1e86" name="Changes" comment="stage 7 almost completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lightSphereDirectional.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightSphereDirectional.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lightSphereMultiple.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightSphereMultiple.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lightSphereSpot.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightSphereSpot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lightSphereSpotSharp.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightSphereSpotSharp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lightTrianglesDirectional.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightTrianglesDirectional.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lightTrianglesMultiple.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightTrianglesMultiple.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lightTrianglesSpot.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightTrianglesSpot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lightTrianglesSpotSharp.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightTrianglesSpotSharp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/shadowSphereTriangleInitial.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/shadowSphereTriangleInitial.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/shadowSphereTriangleMove1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/shadowSphereTriangleMove1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/shadowSphereTriangleMove2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/shadowSphereTriangleMove2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/shadowSphereTriangleSpot1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/shadowSphereTriangleSpot1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/shadowSphereTriangleSpot2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/shadowSphereTriangleSpot2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/shadowTrianglesSphere.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/shadowTrianglesSphere.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/yellow.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometries/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Cylinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/geometries/Sphere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Sphere.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometries/Tube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Tube.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lighting/SpotLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/SpotLight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/primitives/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Material.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/primitives/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Point.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/primitives/Ray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Ray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/primitives/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Vector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/Camera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/RayTracerBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/RayTracerBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/SimpleRayTracer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/SimpleRayTracer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/geometries/CylinderTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/CylinderTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/geometries/GeometriesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/GeometriesTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/geometries/PlaneTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/PlaneTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/geometries/PolygonTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/PolygonTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/geometries/SphereTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/SphereTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/geometries/TriangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/TriangleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/geometries/TubeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/TubeTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/lighting/LightsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/lighting/LightsTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/primitives/RayTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/primitives/RayTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/renderer/CameraIntegrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/CameraIntegrationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/renderer/CameraTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/CameraTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/renderer/ImageWriterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/ImageWriterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/renderer/ReflectionRefractionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/ReflectionRefractionTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/renderer/RenderTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/RenderTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,106 +99,111 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.Unnamed.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "true",
-    "JUnit.All in ISE5784_0606_6297.executor": "Run",
-    "JUnit.CameraIntegrationTests.executor": "Run",
-    "JUnit.CameraIntegrationTests.testPlaneIntersections.executor": "Run",
-    "JUnit.CameraIntegrationTests.testSphereIntersections.executor": "Run",
-    "JUnit.CameraIntegrationTests.testTriangleIntersections.executor": "Run",
-    "JUnit.CameraTest.executor": "Run",
-    "JUnit.CameraTest.testConstructRay.executor": "Run",
-    "JUnit.CameraTests.executor": "Run",
-    "JUnit.CameraTests.testConstructRay.executor": "Run",
-    "JUnit.CylinderTests.executor": "Run",
-    "JUnit.CylinderTests.testFindIntersections.executor": "Run",
-    "JUnit.CylinderTests.testGetNormal.executor": "Run",
-    "JUnit.GeometriesTests.executor": "Run",
-    "JUnit.GeometriesTests.findIntersections.executor": "Run",
-    "JUnit.GeometriesTests.testFindIntersections.executor": "Run",
-    "JUnit.ImageWriterTest.executor": "Run",
-    "JUnit.ImageWriterTest.testWriteToImage.executor": "Run",
-    "JUnit.IntegrationTest.executor": "Run",
-    "JUnit.IntegrationTest.testPlaneIntersections.executor": "Run",
-    "JUnit.LightsTests.executor": "Run",
-    "JUnit.LightsTests.sphereMultipleLights.executor": "Run",
-    "JUnit.LightsTests.sphereSpotSharp.executor": "Run",
-    "JUnit.LightsTests.trianglesMultipleLights.executor": "Run",
-    "JUnit.LightsTests.trianglesSpotSharp.executor": "Run",
-    "JUnit.PlaneTests.executor": "Run",
-    "JUnit.PlaneTests.findIntersections.executor": "Run",
-    "JUnit.PlaneTests.testConstructor.executor": "Run",
-    "JUnit.PlaneTests.testGetNormal.executor": "Run",
-    "JUnit.PointTests.executor": "Run",
-    "JUnit.PointTests.testAdd.executor": "Run",
-    "JUnit.PointTests.testDistance.executor": "Run",
-    "JUnit.PointTests.testDistanceSquared.executor": "Run",
-    "JUnit.PointTests.testSubtract.executor": "Run",
-    "JUnit.PolygonTests.executor": "Run",
-    "JUnit.PolygonTests.testFindIntersections.executor": "Run",
-    "JUnit.PolygonTests.testGetNormal.executor": "Run",
-    "JUnit.RayTests.testFindClosestPoint.executor": "Run",
-    "JUnit.RayTests.testGetPoint.executor": "Run",
-    "JUnit.ReflectionRefractionTests.charmingHouseWithRedRoof.executor": "Run",
-    "JUnit.ReflectionRefractionTests.charmingHouseWithSun.executor": "Run",
-    "JUnit.ReflectionRefractionTests.christmasTreeWithDecorations.executor": "Run",
-    "JUnit.ReflectionRefractionTests.clownScene.executor": "Run",
-    "JUnit.ReflectionRefractionTests.customScene.executor": "Run",
-    "JUnit.ReflectionRefractionTests.executor": "Run",
-    "JUnit.ReflectionRefractionTests.smallHouseInGreenGarden.executor": "Run",
-    "JUnit.ReflectionRefractionTests.stars_galgsy.executor": "Run",
-    "JUnit.ReflectionRefractionTests.trianglesTransparentSphere.executor": "Run",
-    "JUnit.ReflectionRefractionTests.twoSpheres.executor": "Run",
-    "JUnit.RenderTests.basicRenderXml.executor": "Run",
-    "JUnit.RenderTests.executor": "Run",
-    "JUnit.RenderTests.renderMultiColorTest.executor": "Run",
-    "JUnit.RenderTests.renderTwoColorTest.executor": "Run",
-    "JUnit.ShadowTests.executor": "Run",
-    "JUnit.ShadowTests.sphereTriangleMove1.executor": "Run",
-    "JUnit.ShadowTests.sphereTriangleMove2.executor": "Run",
-    "JUnit.ShadowTests.sphereTriangleSpot1.executor": "Run",
-    "JUnit.ShadowTests.sphereTriangleSpot2.executor": "Run",
-    "JUnit.SphereTests.executor": "Run",
-    "JUnit.SphereTests.findIntsersectionsTest.executor": "Run",
-    "JUnit.SphereTests.testConstructor.executor": "Run",
-    "JUnit.SphereTests.testFindIntersections.executor": "Run",
-    "JUnit.TriangleTest.executor": "Run",
-    "JUnit.TriangleTest.findIntersections.executor": "Run",
-    "JUnit.TubeTests.executor": "Run",
-    "JUnit.TubeTests.testFindIntersections.executor": "Run",
-    "JUnit.TubeTests.testGetNormal.executor": "Run",
-    "JUnit.VectorTest.testLengthSquared().executor": "Run",
-    "JUnit.VectorTest.testLengthSquared.executor": "Run",
-    "JUnit.VectorTests.executor": "Run",
-    "JUnit.VectorTests.testDotProduct.executor": "Run",
-    "JUnit.VectorTests.testLength.executor": "Run",
-    "JUnit.VectorTests.testNormalize.executor": "Run",
-    "JUnit.VectorTests.testScale.executor": "Run",
-    "JUnit.primitives in ISE5784_0606_6297.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/USER/Downloads/ISE5784_4171_0954-PR07",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "inlay.hints"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;JUnit.All in ISE5784_0606_6297.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CameraIntegrationTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CameraIntegrationTests.testPlaneIntersections.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CameraIntegrationTests.testSphereIntersections.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CameraIntegrationTests.testTriangleIntersections.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CameraTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CameraTest.testConstructRay.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CameraTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CameraTests.testConstructRay.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CylinderTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CylinderTests.testFindIntersections.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CylinderTests.testGetNormal.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GeometriesTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GeometriesTests.findIntersections.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GeometriesTests.testFindIntersections.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ImageWriterTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ImageWriterTest.testWriteToImage.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.IntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.IntegrationTest.testPlaneIntersections.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LightsTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LightsTests.sphereMultipleLights.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LightsTests.sphereSpotSharp.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LightsTests.trianglesMultipleLights.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LightsTests.trianglesSpotSharp.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlaneTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlaneTests.findIntersections.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlaneTests.testConstructor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlaneTests.testGetNormal.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointTests.testAdd.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointTests.testDistance.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointTests.testDistanceSquared.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PointTests.testSubtract.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PolygonTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PolygonTests.testFindIntersections.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PolygonTests.testGetNormal.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RayTests.testFindClosestPoint.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RayTests.testGetPoint.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReflectionRefractionTests.charmingHouseWithRedRoof.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReflectionRefractionTests.charmingHouseWithSun.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReflectionRefractionTests.christmasTreeWithDecorations.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReflectionRefractionTests.christmasTreeWithDecorations1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReflectionRefractionTests.clownScene.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReflectionRefractionTests.customScene.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReflectionRefractionTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReflectionRefractionTests.smallHouseInGreenGarden.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReflectionRefractionTests.snowMan.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReflectionRefractionTests.starryNight.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReflectionRefractionTests.stars_galgsy.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReflectionRefractionTests.trianglesTransparentSphere.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReflectionRefractionTests.twoSpheres.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RenderTests.basicRenderXml.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RenderTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RenderTests.renderMultiColorTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RenderTests.renderTwoColorTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ShadowTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ShadowTests.sphereTriangleMove1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ShadowTests.sphereTriangleMove2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ShadowTests.sphereTriangleSpot1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ShadowTests.sphereTriangleSpot2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SphereTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SphereTests.findIntsersectionsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SphereTests.testConstructor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SphereTests.testFindIntersections.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TriangleTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TriangleTest.findIntersections.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TubeTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TubeTests.testFindIntersections.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TubeTests.testGetNormal.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.VectorTest.testLengthSquared().executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.VectorTest.testLengthSquared.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.VectorTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.VectorTests.testDotProduct.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.VectorTests.testLength.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.VectorTests.testNormalize.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.VectorTests.testScale.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.primitives in ISE5784_0606_6297.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/USER/Downloads/ISE5784_4171_0954-PR07&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JAVA"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JAVA&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="geometries" />
@@ -189,7 +221,7 @@
       <recent name="geometries" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ReflectionRefractionTests.christmasTreeWithDecorations">
+  <component name="RunManager" selected="JUnit.ReflectionRefractionTests.snowMan">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ISE5784_0606_6297" />
@@ -199,21 +231,6 @@
     </configuration>
     <configuration name="Unnamed" type="CompoundRunConfigurationType">
       <method v="2" />
-    </configuration>
-    <configuration name="ReflectionRefractionTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ISE5784_0606_6297" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="renderer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="renderer" />
-      <option name="MAIN_CLASS_NAME" value="renderer.ReflectionRefractionTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="ReflectionRefractionTests.christmasTreeWithDecorations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
@@ -231,7 +248,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReflectionRefractionTests.clownScene" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReflectionRefractionTests.christmasTreeWithDecorations1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
       <extension name="coverage">
         <pattern>
@@ -241,13 +258,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="renderer" />
       <option name="MAIN_CLASS_NAME" value="renderer.ReflectionRefractionTests" />
-      <option name="METHOD_NAME" value="clownScene" />
+      <option name="METHOD_NAME" value="christmasTreeWithDecorations1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReflectionRefractionTests.customScene" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReflectionRefractionTests.snowMan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
       <extension name="coverage">
         <pattern>
@@ -257,13 +274,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="renderer" />
       <option name="MAIN_CLASS_NAME" value="renderer.ReflectionRefractionTests" />
-      <option name="METHOD_NAME" value="customScene" />
+      <option name="METHOD_NAME" value="snowMan" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReflectionRefractionTests.stars_galgsy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReflectionRefractionTests.starryNight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
       <extension name="coverage">
         <pattern>
@@ -273,7 +290,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="renderer" />
       <option name="MAIN_CLASS_NAME" value="renderer.ReflectionRefractionTests" />
-      <option name="METHOD_NAME" value="stars_galgsy" />
+      <option name="METHOD_NAME" value="starryNight" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReflectionRefractionTests.trianglesTransparentSphere" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ISE5784_0606_6297" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="renderer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.ReflectionRefractionTests" />
+      <option name="METHOD_NAME" value="trianglesTransparentSphere" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -282,19 +315,19 @@
     <list>
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="Compound.Unnamed" />
-      <item itemvalue="JUnit.ReflectionRefractionTests" />
-      <item itemvalue="JUnit.ReflectionRefractionTests.customScene" />
-      <item itemvalue="JUnit.ReflectionRefractionTests.stars_galgsy" />
+      <item itemvalue="JUnit.ReflectionRefractionTests.christmasTreeWithDecorations1" />
+      <item itemvalue="JUnit.ReflectionRefractionTests.snowMan" />
+      <item itemvalue="JUnit.ReflectionRefractionTests.starryNight" />
+      <item itemvalue="JUnit.ReflectionRefractionTests.trianglesTransparentSphere" />
       <item itemvalue="JUnit.ReflectionRefractionTests.christmasTreeWithDecorations" />
-      <item itemvalue="JUnit.ReflectionRefractionTests.clownScene" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ReflectionRefractionTests.snowMan" />
+        <item itemvalue="JUnit.ReflectionRefractionTests.starryNight" />
+        <item itemvalue="JUnit.ReflectionRefractionTests.christmasTreeWithDecorations1" />
         <item itemvalue="JUnit.ReflectionRefractionTests.christmasTreeWithDecorations" />
-        <item itemvalue="JUnit.ReflectionRefractionTests.customScene" />
-        <item itemvalue="JUnit.ReflectionRefractionTests.clownScene" />
-        <item itemvalue="JUnit.ReflectionRefractionTests.stars_galgsy" />
-        <item itemvalue="JUnit.ReflectionRefractionTests" />
+        <item itemvalue="JUnit.ReflectionRefractionTests.trianglesTransparentSphere" />
       </list>
     </recent_temporary>
   </component>
@@ -491,7 +524,15 @@
       <option name="project" value="LOCAL‎" />
       <updated>1719248591871</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL‎-00024" summary="stage 7 almost completed">
+      <option name="closed" value="true" />
+      <created>1719871433734</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL‎-00024" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1719871433734</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -524,7 +565,8 @@
     <MESSAGE value="stage 6 complete" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/renderer/SimpleRayTracer.java" />
     <MESSAGE value="stage 7 part 1 completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="stage 7 part 1 completed" />
+    <MESSAGE value="stage 7 almost completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="stage 7 almost completed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
