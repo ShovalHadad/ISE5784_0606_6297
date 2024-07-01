@@ -14,9 +14,9 @@ public class Cylinder extends Tube {
 
     /**
      * constructor with parameters
-     * @param radius
-     * @param ray
-     * @param height
+     * @param radius input
+     * @param ray input
+     * @param height input
      */
     public Cylinder(double radius, Ray ray, double height) {
         super(radius, ray);

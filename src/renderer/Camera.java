@@ -33,13 +33,14 @@ public class Camera implements Cloneable {
 
     /**
      * Calculation of the pixel point in the image plane
+     *
      * @param nX number of columns
      * @param nY number of lines
-     * @param j x of view plane
-     * @param i y of view plane
+     * @param i  y of view plane
+     * @param j  x of view plane
      * @return ray
      */
-    public Ray constructRay(int nX, int nY, int j, int i) {
+    public Ray constructRay(int nX, int nY, int i, int j) {
         //pixels width and height
         double rx = width / nX;
         double ry = height / nY;
@@ -61,7 +62,7 @@ public class Camera implements Cloneable {
         }
         Vector Vij = pij.subtract(p0); // vector from camera's place
 
-        return new Ray(Vij, p0);
+        return new Ray(p0, Vij);
     }
 
     // functions we added in stage 5:
@@ -70,15 +71,11 @@ public class Camera implements Cloneable {
      * @return camera
      */
     public Camera renderImage() {
-        if (this.imageWriter == null)
-            throw new UnsupportedOperationException("Missing imageWriter");
-        if (this.rayTracer == null)
-            throw new UnsupportedOperationException("Missing rayTracer");
-        int x = this.imageWriter.getNx();
-        int y = this.imageWriter.getNy();
-        for (int i = 0; i < this.imageWriter.getNx(); i++) {
-            for (int j = 0; j < this.imageWriter.getNy(); j++) {
-                castRay(i, j, x, y);
+        int nX = this.imageWriter.getNx();
+        int nY = this.imageWriter.getNy();
+        for (int i = 0; i < nX; i++) {
+            for (int j = 0; j < nY; j++) {
+                castRay(nX, nY, i, j);
             }
         }
         return this;
@@ -92,13 +89,13 @@ public class Camera implements Cloneable {
      */
     public Camera printGrid(int interval, Color color) {
         //running on the view plane
-        double x = this.imageWriter.getNx();
-        double y = this.imageWriter.getNy();
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++) {
+        double nX = this.imageWriter.getNx();
+        double nY = this.imageWriter.getNy();
+        for (int xIndex = 0; xIndex < nX; xIndex++) {
+            for (int yIndex = 0; yIndex < nY; yIndex++) {
                 //create the net of the grid
-                if (i % interval == 0 || j % interval == 0) {
-                    imageWriter.writePixel(i, j, color);
+                if (xIndex % interval == 0 || yIndex % interval == 0) {
+                    imageWriter.writePixel(xIndex, yIndex, color);
                 }
             }
         }
@@ -114,12 +111,14 @@ public class Camera implements Cloneable {
 
     /**
      * this function colors the j pixels
-     * @param i  resolution
+     *
+     * @param i resolution
      * @param j number of pixels
      */
-    private void castRay(int i,int j, int x, int y) {
-        Ray ray = constructRay(x, y, j, i);
-        this.imageWriter.writePixel(j, i, this.rayTracer.traceRay(ray));
+    private void castRay(int nX, int nY, int i, int j) {
+        Ray ray = constructRay(nX, nY, i, j);
+        Color color = this.rayTracer.traceRay(ray);
+        this.imageWriter.writePixel(j, i, color);
     }
 
 

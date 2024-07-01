@@ -6,9 +6,9 @@ package primitives;
 public class Vector extends Point {
     /**
      * constructor that gets 3 numbers and set the vector
-     * @param x
-     * @param y
-     * @param z
+     * @param x of vector
+     * @param y of vector
+     * @param z of vector
      */
     public Vector(double x, double y, double z) {
         super(x, y, z);
@@ -19,7 +19,7 @@ public class Vector extends Point {
 
     /**
      * constructor that get a double3 type and set the vector
-     * @param xyz
+     * @param xyz double3
      */
     public Vector(Double3 xyz) {
         super(xyz);
@@ -74,16 +74,6 @@ public class Vector extends Point {
                 ((xyz.d3 * v.xyz.d1) - (xyz.d1 * v.xyz.d3)),
                 ((xyz.d1 * v.xyz.d2) - (xyz.d2 * v.xyz.d1)));
     }
-
-//
-//    /**
-//     * private function for getting the sum of the vector (to check if normalized)
-//     *  x + y + z
-//     * @return int
-//     */
-//    private int getSum(){
-//        return (int)(xyz.d1 + xyz.d2 + xyz.d3);
-//    }
 
     /**
      * returns the normalize vector

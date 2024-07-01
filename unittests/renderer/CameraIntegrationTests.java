@@ -29,8 +29,8 @@ class CameraIntegrationTests {
         int count = 0;
         for (int i = 0; i < nY; i++) {
             for (int j = 0; j < nX; j++) {
-                Ray ray = camera.constructRay(nX, nY, j, i);
-                var intersections = geometry.findGeoIntersections(ray);
+                Ray ray = camera.constructRay(nX, nY, i, j);
+                var intersections = geometry.findIntersections(ray);
                 if (intersections != null) {
                     count += intersections.size();
                 }

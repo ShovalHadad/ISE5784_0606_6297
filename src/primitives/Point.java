@@ -10,9 +10,9 @@ public class Point {
 
     /**
      * constructor that gets 3 numbers and set the point
-     * @param x
-     * @param y
-     * @param z
+     * @param x of point
+     * @param y of point
+     * @param z of point
      */
     public Point(double x, double y, double z) {
         xyz = new Double3(x, y, z);
@@ -20,7 +20,7 @@ public class Point {
 
     /**
      * constructor that get a Double3 type and set the point
-     * @param xyz
+     * @param xyz double3
      */
     public Point(Double3 xyz) {
         this.xyz = xyz;
@@ -28,7 +28,7 @@ public class Point {
 
     /**
      * Calculates the distance squared -> |ba|^2 = (a1-b1)^2+(a2-b2)^2+(a3-b3)^2
-     * @param point
+     * @param point input
      * @return double
      */
     public double distanceSquared(Point point) {
@@ -39,7 +39,7 @@ public class Point {
 
     /**
      * Calculates the distance between 2 points
-     * @param point
+     * @param point input
      * @return double
      */
     public double distance(Point point) {
@@ -48,7 +48,7 @@ public class Point {
 
     /**
      * Calculates the vector -> ab = (b1-a1, b2-a2, b3-a3)
-     * @param point
+     * @param point input
      * @return vector
      */
     public Vector subtract(Point point) {
@@ -57,7 +57,7 @@ public class Point {
 
     /**
      * add a point to a vector
-     * @param vector
+     * @param vector input
      * @return point
      */
     public Point add(Vector vector) {

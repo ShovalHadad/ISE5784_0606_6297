@@ -58,8 +58,8 @@ public class SpotLight extends PointLight {
         if (Util.isZero(cos)) {
             return Color.BLACK;
         }
-        Color pointLightIntensity = super.getIntensity(p);
-        return (pointLightIntensity.scale(Math.max(0, cos)));
+        Color pointLightIntensity = (super.getIntensity(p)).scale(Math.max(0, cos));
+        return pointLightIntensity;
     }
 
 }
