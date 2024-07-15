@@ -4,45 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5b2b54a-d520-461a-a30d-1ed7389f1e86" name="Changes" comment="stage 7 almost completed">
+    <list default="true" id="f5b2b54a-d520-461a-a30d-1ed7389f1e86" name="Changes" comment="stage 7 completed - christmasTreeWithDecorations is the image">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/lightSphereDirectional.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightSphereDirectional.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/lightSphereMultiple.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightSphereMultiple.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/lightSphereSpot.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightSphereSpot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/lightSphereSpotSharp.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightSphereSpotSharp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/lightTrianglesDirectional.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightTrianglesDirectional.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/lightTrianglesMultiple.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightTrianglesMultiple.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/lightTrianglesSpot.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightTrianglesSpot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/lightTrianglesSpotSharp.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightTrianglesSpotSharp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/shadowSphereTriangleInitial.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/shadowSphereTriangleInitial.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/shadowSphereTriangleMove1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/shadowSphereTriangleMove1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/shadowSphereTriangleMove2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/shadowSphereTriangleMove2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/shadowSphereTriangleSpot1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/shadowSphereTriangleSpot1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/shadowSphereTriangleSpot2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/shadowSphereTriangleSpot2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/shadowTrianglesSphere.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/shadowTrianglesSphere.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/yellow.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometries/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Cylinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometries/Sphere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Sphere.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometries/Tube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Tube.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lighting/SpotLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/SpotLight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/primitives/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/primitives/Ray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Ray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/primitives/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Vector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/snowMan.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/snowMan.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/Camera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unittests/geometries/CylinderTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/CylinderTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unittests/geometries/GeometriesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/GeometriesTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unittests/geometries/PlaneTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/PlaneTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unittests/geometries/PolygonTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/PolygonTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unittests/geometries/SphereTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/SphereTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unittests/geometries/TriangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/TriangleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unittests/geometries/TubeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/TubeTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unittests/lighting/LightsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/lighting/LightsTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unittests/primitives/RayTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/primitives/RayTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unittests/renderer/CameraIntegrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/CameraIntegrationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unittests/renderer/CameraTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/CameraTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unittests/renderer/ImageWriterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/ImageWriterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unittests/renderer/ReflectionRefractionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/ReflectionRefractionTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unittests/renderer/RenderTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/RenderTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +187,7 @@
       <recent name="geometries" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ReflectionRefractionTests.snowMan">
+  <component name="RunManager" selected="JUnit.ReflectionRefractionTests.starryNight">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ISE5784_0606_6297" />
@@ -264,6 +230,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ReflectionRefractionTests.customScene" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ISE5784_0606_6297" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="renderer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.ReflectionRefractionTests" />
+      <option name="METHOD_NAME" value="customScene" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ReflectionRefractionTests.snowMan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
       <extension name="coverage">
@@ -296,38 +278,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReflectionRefractionTests.trianglesTransparentSphere" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ISE5784_0606_6297" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="renderer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="renderer" />
-      <option name="MAIN_CLASS_NAME" value="renderer.ReflectionRefractionTests" />
-      <option name="METHOD_NAME" value="trianglesTransparentSphere" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="Compound.Unnamed" />
+      <item itemvalue="JUnit.ReflectionRefractionTests.customScene" />
       <item itemvalue="JUnit.ReflectionRefractionTests.christmasTreeWithDecorations1" />
       <item itemvalue="JUnit.ReflectionRefractionTests.snowMan" />
       <item itemvalue="JUnit.ReflectionRefractionTests.starryNight" />
-      <item itemvalue="JUnit.ReflectionRefractionTests.trianglesTransparentSphere" />
       <item itemvalue="JUnit.ReflectionRefractionTests.christmasTreeWithDecorations" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ReflectionRefractionTests.snowMan" />
         <item itemvalue="JUnit.ReflectionRefractionTests.starryNight" />
+        <item itemvalue="JUnit.ReflectionRefractionTests.snowMan" />
+        <item itemvalue="JUnit.ReflectionRefractionTests.customScene" />
         <item itemvalue="JUnit.ReflectionRefractionTests.christmasTreeWithDecorations1" />
         <item itemvalue="JUnit.ReflectionRefractionTests.christmasTreeWithDecorations" />
-        <item itemvalue="JUnit.ReflectionRefractionTests.trianglesTransparentSphere" />
       </list>
     </recent_temporary>
   </component>
@@ -532,7 +498,23 @@
       <option name="project" value="LOCAL‎" />
       <updated>1719871433734</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL‎-00025" summary="stage 7 completed - christmasTreeWithDecorations is the image">
+      <option name="closed" value="true" />
+      <created>1720614112257</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL‎-00025" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1720614112257</updated>
+    </task>
+    <task id="LOCAL‎-00026" summary="stage 7 completed - christmasTreeWithDecorations is the image">
+      <option name="closed" value="true" />
+      <created>1720614177025</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL‎-00026" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1720614177025</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -563,10 +545,11 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/renderer/SimpleRayTracer.java&#10;#&#9;unittests/renderer/RenderTests.java" />
     <MESSAGE value="stage 7 part 1 complete" />
     <MESSAGE value="stage 6 complete" />
-    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/renderer/SimpleRayTracer.java" />
     <MESSAGE value="stage 7 part 1 completed" />
     <MESSAGE value="stage 7 almost completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="stage 7 almost completed" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/renderer/SimpleRayTracer.java" />
+    <MESSAGE value="stage 7 completed - christmasTreeWithDecorations is the image" />
+    <option name="LAST_COMMIT_MESSAGE" value="stage 7 completed - christmasTreeWithDecorations is the image" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -575,6 +558,11 @@
           <url>file://$PROJECT_DIR$/src/geometries/Tube.java</url>
           <line>176</line>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/unittests/renderer/ReflectionRefractionTests.java</url>
+          <line>362</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

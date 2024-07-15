@@ -2,6 +2,8 @@ package renderer;
 
 import primitives.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.MissingResourceException;
 
 import static primitives.Util.*;
@@ -15,6 +17,9 @@ public class Camera implements Cloneable {
     private Vector vTo, vUp, vRight;
     private double width = 0, height = 0, distance = 0;
 
+    private double apertureSize = 0; // Added for DOF
+    private double focusDistance = 0; // Added for DOF
+
     private ImageWriter imageWriter;  // added in stage 5
     private RayTracerBase rayTracer;  // added in stage 5
 
@@ -22,6 +27,8 @@ public class Camera implements Cloneable {
      * empty constructor
      */
     private Camera() { }
+
+
 
     /**
      * returns a new Builder
@@ -64,6 +71,98 @@ public class Camera implements Cloneable {
 
         return new Ray(p0, Vij);
     }
+    /**
+     * Calculate the pixel color considering Depth of Field
+     *
+     * @param nX number of columns
+     * @param nY number of lines
+     * @param i  y of view plane
+     * @param j  x of view plane
+     * @return color
+     */
+    private Color calculatePixelColor(int nX, int nY, int i, int j) {
+        List<Color> colors = new ArrayList<>();
+        Point viewPlanePoint = calculateViewPlanePoint(nX, nY, i, j);
+
+        // Number of samples
+        int samples = 10;
+        for (int k = 0; k < samples; k++) {
+            Point aperturePoint = generateAperturePoint();
+            Ray sampleRay = createSampleRay(aperturePoint, viewPlanePoint);
+            colors.add(rayTracer.traceRay(sampleRay));
+        }
+
+        return averageColors(colors);
+    }
+
+    ////the func that i add
+    /**
+     * Calculate the point on the view plane corresponding to a given pixel
+     *
+     * @param nX number of columns
+     * @param nY number of lines
+     * @param i  y of view plane
+     * @param j  x of view plane
+     * @return point on the view plane
+     */
+    private Point calculateViewPlanePoint(int nX, int nY, int i, int j) {
+        double rx = width / nX;
+        double ry = height / nY;
+        double xj = (j - (nX - 1) / 2d) * rx;
+        double yi = -(i - (nY - 1) / 2d) * ry;
+        Point pij = p0.add(vTo.scale(distance));
+        if (!isZero(xj)) {
+            pij = pij.add(vRight.scale(xj));
+        }
+        if (!isZero(yi)) {
+            pij = pij.add(vUp.scale(yi));
+        }
+        return pij;
+    }
+    /**
+     * Generate a random point on the aperture (lens)
+     *
+     * @return random point on the aperture
+     */
+    private Point generateAperturePoint() {
+        double radius = 1.0; // example radius of aperture, adjust as needed
+        double angle = Math.random() * 2 * Math.PI;
+        double r = Math.sqrt(Math.random()) * radius;
+        double x = r * Math.cos(angle);
+        double y = r * Math.sin(angle);
+        return p0.add(vRight.scale(x)).add(vUp.scale(y));
+    }
+    /**
+     * Create a ray from an aperture point to a view plane point
+     *
+     * @param aperturePoint point on the aperture
+     * @param viewPlanePoint point on the view plane
+     * @return ray from aperture point to view plane point
+     */
+    private Ray createSampleRay(Point aperturePoint, Point viewPlanePoint) {
+        Vector direction = viewPlanePoint.subtract(aperturePoint).normalize();
+        return new Ray(aperturePoint, direction);
+    }
+    /**
+     * Calculate the average color from a list of colors
+     *
+     * @param colors list of colors
+     * @return average color
+     */
+    private Color averageColors(List<Color> colors) {
+        int size = colors.size();
+        double r = 0, g = 0, b = 0;
+        for (Color color : colors) {
+            r += color.getColor().getRed();
+            g += color.getColor().getGreen();
+            b += color.getColor().getBlue();
+        }
+        r /= size;
+        g /= size;
+        b /= size;
+        return new Color((int)r, (int)g, (int)b);
+    }
+
 
     // functions we added in stage 5:
     /**
@@ -204,6 +303,32 @@ public class Camera implements Cloneable {
                 throw new IllegalArgumentException("Distance must be greater than 0");
             }
             camera.distance = vpDistance;
+            return this;
+        }
+
+        /**
+         * Set aperture size for Depth of Field
+         * @param apertureSize size of the aperture
+         * @return this
+         */
+        public Builder setApertureSize(double apertureSize) {
+            if (apertureSize < 0) {
+                throw new IllegalArgumentException("Aperture size must be non-negative");
+            }
+            camera.apertureSize = apertureSize;
+            return this;
+        }
+
+        /**
+         * Set focus distance for Depth of Field
+         * @param focusDistance focus distance
+         * @return this
+         */
+        public Builder setFocusDistance(double focusDistance) {
+            if (focusDistance <= 0) {
+                throw new IllegalArgumentException("Focus distance must be greater than 0");
+            }
+            camera.focusDistance = focusDistance;
             return this;
         }
 
