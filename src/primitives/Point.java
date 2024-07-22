@@ -10,9 +10,9 @@ public class Point {
 
     /**
      * constructor that gets 3 numbers and set the point
-     * @param x of point
-     * @param y of point
-     * @param z of point
+     * @param x input
+     * @param y input
+     * @param z input
      */
     public Point(double x, double y, double z) {
         xyz = new Double3(x, y, z);
@@ -20,7 +20,7 @@ public class Point {
 
     /**
      * constructor that get a Double3 type and set the point
-     * @param xyz double3
+     * @param xyz input
      */
     public Point(Double3 xyz) {
         this.xyz = xyz;
