@@ -4,31 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5b2b54a-d520-461a-a30d-1ed7389f1e86" name="Changes" comment="pic starryNight work">
+    <list default="true" id="f5b2b54a-d520-461a-a30d-1ed7389f1e86" name="Changes" comment="minip1 with anti aliasing">
+      <change afterPath="$PROJECT_DIR$/images/starryNight3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/base render test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/clownScene.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/color render test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/lightSphereMultiple.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/lightSpherePoint.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/lightSphereSpot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/lightSphereSpotSharp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/lightTrianglesPoint.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/lightTrianglesSpot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/lightTrianglesSpotSharp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/reflectionTwoSpheresMirrored.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/refractionShadow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/refractionTwoSpheres.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/shadowSphereTriangleInitial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/shadowSphereTriangleMove1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/shadowSphereTriangleMove2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/shadowSphereTriangleSpot1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/shadowSphereTriangleSpot2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/shadowTrianglesSphere.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/yellow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/primitives/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/Camera.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unittests/renderer/ReflectionRefractionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/ReflectionRefractionTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -216,7 +194,7 @@
       <recent name="geometries" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ReflectionRefractionTests.starryNight">
+  <component name="RunManager" selected="JUnit.All in ISE5784_0606_6297">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ISE5784_0606_6297" />
@@ -226,6 +204,14 @@
     </configuration>
     <configuration name="Unnamed" type="CompoundRunConfigurationType">
       <method v="2" />
+    </configuration>
+    <configuration name="All in ISE5784_0606_6297" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ISE5784_0606_6297" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="ReflectionRefractionTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5784_0606_6297" />
@@ -290,38 +276,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReflectionRefractionTests.trianglesTransparentSphere" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ISE5784_0606_6297" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="renderer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="renderer" />
-      <option name="MAIN_CLASS_NAME" value="renderer.ReflectionRefractionTests" />
-      <option name="METHOD_NAME" value="trianglesTransparentSphere" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="Compound.Unnamed" />
+      <item itemvalue="JUnit.All in ISE5784_0606_6297" />
       <item itemvalue="JUnit.ReflectionRefractionTests.starryNight11111" />
       <item itemvalue="JUnit.ReflectionRefractionTests" />
-      <item itemvalue="JUnit.ReflectionRefractionTests.trianglesTransparentSphere" />
       <item itemvalue="JUnit.ReflectionRefractionTests.customScene111" />
       <item itemvalue="JUnit.ReflectionRefractionTests.starryNight" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in ISE5784_0606_6297" />
         <item itemvalue="JUnit.ReflectionRefractionTests.starryNight" />
         <item itemvalue="JUnit.ReflectionRefractionTests.customScene111" />
         <item itemvalue="JUnit.ReflectionRefractionTests.starryNight11111" />
         <item itemvalue="JUnit.ReflectionRefractionTests" />
-        <item itemvalue="JUnit.ReflectionRefractionTests.trianglesTransparentSphere" />
       </list>
     </recent_temporary>
   </component>
@@ -550,7 +520,23 @@
       <option name="project" value="LOCAL‎" />
       <updated>1721057964643</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL‎-00028" summary="minip1 with anti aliasing">
+      <option name="closed" value="true" />
+      <created>1721669237760</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL‎-00028" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1721669237760</updated>
+    </task>
+    <task id="LOCAL‎-00029" summary="minip1 with anti aliasing">
+      <option name="closed" value="true" />
+      <created>1721669249643</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL‎-00029" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1721669249643</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -586,7 +572,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/renderer/SimpleRayTracer.java" />
     <MESSAGE value="stage 7 completed - christmasTreeWithDecorations is the image" />
     <MESSAGE value="pic starryNight work" />
-    <option name="LAST_COMMIT_MESSAGE" value="pic starryNight work" />
+    <MESSAGE value="minip1 with anti aliasing" />
+    <option name="LAST_COMMIT_MESSAGE" value="minip1 with anti aliasing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

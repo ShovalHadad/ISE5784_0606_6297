@@ -310,6 +310,7 @@ public class ReflectionRefractionTests {
 
    private Intersectable star(double x, double y, double z, double height, double width) {
       // The vertices for a star
+      double reflaction = 0.2;
       Point p1 = new Point(x, y, z); // top
       Point p2 = new Point(x + (width * 0.125), y - (height * 0.5), z);
       Point p3 = new Point(x + (width * 0.5), y - (height * 0.5), z);
@@ -324,25 +325,25 @@ public class ReflectionRefractionTests {
 
       return new Geometries(
               new Triangle(p1, p2, p6).setEmission(new Color(YELLOW))
-                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100).setKr(reflaction)),
               new Triangle(p2, p3, p6).setEmission(new Color(YELLOW))
-                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100).setKr(reflaction)),
               new Triangle(p3, p4, p6).setEmission(new Color(YELLOW))
-                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100).setKr(reflaction)),
               new Triangle(p4, p5, p6).setEmission(new Color(YELLOW))
-                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100).setKr(reflaction)),
               new Triangle(p5, p11, p6).setEmission(new Color(YELLOW))
-                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100).setKr(reflaction)),
               new Triangle(p11, p7, p6).setEmission(new Color(YELLOW))
-                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100).setKr(reflaction)),
               new Triangle(p7, p8, p6).setEmission(new Color(YELLOW))
-                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100).setKr(reflaction)),
               new Triangle(p8, p9, p6).setEmission(new Color(YELLOW))
-                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100).setKr(reflaction)),
               new Triangle(p9, p10, p6).setEmission(new Color(YELLOW))
-                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10)),
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100).setKr(reflaction)),
               new Triangle(p10, p1, p6).setEmission(new Color(YELLOW))
-                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10))
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100).setKr(reflaction))
       );
    }
 
@@ -350,7 +351,7 @@ public class ReflectionRefractionTests {
       double x = -200;
       double y = 230;
       double z = -400;
-      double h = 15;
+      double h = 20;
       Geometries geometries = new Geometries();
       for (int j = 0; j <= 2; j++) {  // number of rows of stars
          for (int i = 0; i < 8; i++) {  // number of stars in a row
@@ -404,15 +405,15 @@ public class ReflectionRefractionTests {
                       .setEmission(new Color(18, 138, 45))
                       .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100).setKr(0)),
               // second level-
-              new Triangle(new Point(x - 20, y - (height * 0.6), z - 10), new Point(x + 30, y - (height * 0.6), z - 10), new Point(x + 3, y - 5, z - 10))
+              new Triangle(new Point(x - 20, y - (height * 0.6), z - 5), new Point(x + 30, y - (height * 0.6), z - 5), new Point(x + 3, y - 5, z - 5))
                       .setEmission(new Color(14, 105, 18))
                       .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100).setKr(0)),
               // third level-
-              new Triangle(new Point(x - 20, y - (height * 0.85), z - 20), new Point(x + 35, y - (height * 0.85), z - 20), new Point(x + 5, y - 10, z - 20))
+              new Triangle(new Point(x - 20, y - (height * 0.85), z - 10), new Point(x + 35, y - (height * 0.85), z - 10), new Point(x + 5, y - 10, z - 10))
                       .setEmission(new Color(13, 82, 16))
                       .setMaterial(new Material().setKd(0.6).setKs(0.1).setShininess(100).setKr(0)),
               // tree stem-
-              new Cylinder(5, new Ray(new Point(x + 7, y - height - 5, z - 30), new Vector(0, 1, 0)), (height * 0.20))
+              new Cylinder(5, new Ray(new Point(x + 7, y - height - 5, z - 20), new Vector(0, 1, 0)), (height * 0.20))
                       .setEmission(new Color(112, 76, 4))
                       .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10))
       );
@@ -426,15 +427,15 @@ public class ReflectionRefractionTests {
                       .setEmission(new Color(18, 138, 45))
                       .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100).setKr(0)),
               // second level-
-              new Triangle(new Point(x + 20, y - (height * 0.6), z - 10), new Point(x - 30, y - (height * 0.6), z - 10), new Point(x - 3, y - 5, z - 10))
+              new Triangle(new Point(x + 20, y - (height * 0.6), z - 5), new Point(x - 30, y - (height * 0.6), z - 5), new Point(x - 3, y - 5, z - 5))
                       .setEmission(new Color(14, 105, 18))
                       .setMaterial(new Material().setKd(0.5).setKs(0.1).setShininess(100).setKr(0)),
               // third level-
-              new Triangle(new Point(x + 20, y - (height * 0.85), z - 20), new Point(x - 35, y - (height * 0.85), z - 20), new Point(x - 5, y - 10, z - 20))
+              new Triangle(new Point(x + 20, y - (height * 0.85), z - 10), new Point(x - 35, y - (height * 0.85), z - 10), new Point(x - 5, y - 10, z - 10))
                       .setEmission(new Color(13, 82, 16))
                       .setMaterial(new Material().setKd(0.6).setKs(0.1).setShininess(100).setKr(0)),
               // tree stem-
-              new Cylinder(5, new Ray(new Point(x - 7, y - height - 5, z - 30), new Vector(0, 1, 0)), (height * 0.20))
+              new Cylinder(5, new Ray(new Point(x - 7, y - height - 5, z - 20), new Vector(0, 1, 0)), (height * 0.20))
                       .setEmission(new Color(112, 76, 4))
                       .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(10))
       );
@@ -525,33 +526,33 @@ public class ReflectionRefractionTests {
               // left eye
               new Sphere(1.3, new Point(-3, -80, 25))
                       .setEmission(new Color(59, 60, 61))
-                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100)),
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100).setKr(0.5)),
               // right eye
               new Sphere(1.3, new Point(3, -80, 25))
                       .setEmission(new Color(59, 60, 61))
-                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100)),
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100).setKr(0.5)),
 
               // nose
               new Sphere(1.5, new Point(0, -83.5, 25))
                       .setEmission(new Color(59, 60, 61))
-                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100)),
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100).setKr(0.5)),
 
               // smile
               new Sphere(1, new Point(0, -88, 25))
                       .setEmission(new Color(59, 60, 61))
-                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100)),
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100).setKr(0.5)),
               new Sphere(1, new Point(-3, -87, 25))
                       .setEmission(new Color(59, 60, 61))
-                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100)),
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100).setKr(0.5)),
               new Sphere(1, new Point(3, -87, 25))
                       .setEmission(new Color(59, 60, 61))
-                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100)),
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100).setKr(0.5)),
               new Sphere(1, new Point(-5, -85, 25))
                       .setEmission(new Color(59, 60, 61))
-                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100)),
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100).setKr(0.5)),
               new Sphere(1, new Point(5, -85, 25))
                       .setEmission(new Color(59, 60, 61))
-                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100)),
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100).setKr(0.5)),
 
               // Buttons
               new Sphere(2, new Point(0, -100, 30))
@@ -573,7 +574,7 @@ public class ReflectionRefractionTests {
               // moon-
               new Sphere(25, new Point(-180, 180, -100))
                       .setEmission(new Color(lightGray))
-                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100).setKt(0.7)),
+                      .setMaterial(new Material().setKd(0.8).setKs(0.2).setShininess(100).setKt(0.7).setKr(0.3)),
               // moon shadow-
               new Sphere(18.7, new Point(-160, 164, -50))
                       .setEmission(new Color(5, 5, 100))
@@ -581,16 +582,18 @@ public class ReflectionRefractionTests {
 
       );
       // Adding lights
-      scene.lights.add(new SpotLight(new Color(700, 400, 400), new Point(-100, 100, 500), new Vector(1, -1, -2))
+      scene.lights.add(new SpotLight(new Color(lightGray), new Point(-180, 1000, -200), new Vector(1, -1, 2))
               .setkL(4E-4).setkQ(2E-5));
-      scene.lights.add(new SpotLight(new Color(white), new Point(-180, 180, -130), new Vector(0, 0, 1))
-              //,scene.lights.add(new SpotLight(new Color(white), new Point(-180, 180, -130), new Vector(0, 0, 1))   <= to add another light
-      );
+      //scene.lights.add(new SpotLight(new Color(blue), new Point(-150, 100, 200), new Vector(1, -2, -1))
+      scene.lights.add(new SpotLight(new Color(gray), new Point(-150, 100, 200), new Vector(1, -2, -1))
+              .setkL(4E-4).setkQ(2E-5));
+      //scene.lights.add(new SpotLight(new Color(gray), new Point(150, 100, 200), new Vector(-1, -2, -1)).setkL(4E-4).setkQ(2E-5));  // <= to add another light
+      scene.lights.add(new SpotLight(new Color(blue), new Point(150, 100, 200), new Vector(-1, -2, -1)).setkL(4E-4).setkQ(2E-5));  // <= to add another light
       cameraBuilder.setLocation(new Point(0, 0, 500))
               .setVpDistance(500)
               .setVpSize(400, 400)
               .setNumSamples(8)
-              .setImageWriter(new ImageWriter("starryNight_8", 1000, 1000))
+              .setImageWriter(new ImageWriter("starryNight_888", 1000, 1000))
               .build()
               .renderImage()
               .writeToImage();
