@@ -111,6 +111,20 @@ public class Color {
         return new Color(rgb.reduce(k));
     }
 
+    //add for adaptive super-sampling
+    /**
+     * Calculate the difference between this color and another color
+     * using the Euclidean distance between their RGB components.
+     * @param other the other color to compare to
+     * @return the difference as a double
+     */
+    public double difference(Color other) {
+        double rDiff = this.rgb.d1 - other.rgb.d1;
+        double gDiff = this.rgb.d2 - other.rgb.d2;
+        double bDiff = this.rgb.d3 - other.rgb.d3;
+        return Math.sqrt(rDiff * rDiff + gDiff * gDiff + bDiff * bDiff);
+    }
+
     @Override
     public String toString() { return "rgb:" + rgb; }
 }

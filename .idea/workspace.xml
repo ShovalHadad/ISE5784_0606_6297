@@ -4,9 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5b2b54a-d520-461a-a30d-1ed7389f1e86" name="Changes" comment="minip1 with anti aliasing">
-      <change afterPath="$PROJECT_DIR$/images/starryNight3.png" afterDir="false" />
+    <list default="true" id="f5b2b54a-d520-461a-a30d-1ed7389f1e86" name="Changes" comment="minip1 with anti aliasing complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/base render test.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/base render test.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/christmasTreeWithDecorations.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/christmasTreeWithDecorations.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/color render test.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/color render test.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/custom.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/custom.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/custom4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/custom44.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/custom444.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/customScene111.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/customSceneImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/customSceneImage2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lightSphereDirectional.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightSphereDirectional.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lightSphereMultiple.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightSphereMultiple.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lightSpherePoint.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightSpherePoint.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lightSphereSpot.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightSphereSpot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lightSphereSpotSharp.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightSphereSpotSharp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lightTrianglesPoint.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightTrianglesPoint.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lightTrianglesSpot.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightTrianglesSpot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lightTrianglesSpotSharp.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/lightTrianglesSpotSharp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/reflectionTwoSpheresMirrored.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/reflectionTwoSpheresMirrored.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/refractionShadow.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/refractionShadow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/refractionTwoSpheres.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/refractionTwoSpheres.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/shadowSphereTriangleInitial.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/shadowSphereTriangleInitial.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/shadowSphereTriangleMove1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/shadowSphereTriangleMove1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/shadowSphereTriangleMove2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/shadowSphereTriangleMove2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/shadowSphereTriangleSpot1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/shadowSphereTriangleSpot1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/shadowSphereTriangleSpot2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/shadowSphereTriangleSpot2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/shadowTrianglesSphere.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/shadowTrianglesSphere.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/snowMan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/starryNight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/starryNight2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/starryNight3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/starryNight_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/starryNight_888.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/starryNight_888.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/starryNight_8888.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primitives/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Color.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/Camera.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unittests/renderer/ReflectionRefractionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/ReflectionRefractionTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -536,7 +571,23 @@
       <option name="project" value="LOCAL‎" />
       <updated>1721669249643</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL‎-00030" summary="minip1 with anti aliasing complete">
+      <option name="closed" value="true" />
+      <created>1721751458700</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL‎-00030" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1721751458701</updated>
+    </task>
+    <task id="LOCAL‎-00031" summary="minip1 with anti aliasing complete">
+      <option name="closed" value="true" />
+      <created>1721751528886</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL‎-00031" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1721751528886</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -573,7 +624,8 @@
     <MESSAGE value="stage 7 completed - christmasTreeWithDecorations is the image" />
     <MESSAGE value="pic starryNight work" />
     <MESSAGE value="minip1 with anti aliasing" />
-    <option name="LAST_COMMIT_MESSAGE" value="minip1 with anti aliasing" />
+    <MESSAGE value="minip1 with anti aliasing complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="minip1 with anti aliasing complete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

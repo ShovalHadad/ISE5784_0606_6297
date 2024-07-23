@@ -244,7 +244,7 @@ public class ReflectionRefractionTests {
    }
 
    /**
-    * some geometries shapes un a photo
+    * some geometries shapes in a photo
     */
    @Test
    public void customScene() {
@@ -271,15 +271,18 @@ public class ReflectionRefractionTests {
       // Camera settings
       cameraBuilder.setLocation(new Point(30, -300, 500)).setVpDistance(80)
               .setVpSize(200, 200)
-              .setImageWriter(new ImageWriter("customScene111", 600, 600))
+              .setImageWriter(new ImageWriter("customScene", 600, 600))
               .build()
               .renderImage()
               .writeToImage();
 
    }
 
+   /**
+    * some fare geometries shapes in a photo
+    */
    @Test
-   public void customScene111() {
+   public void customScene1() {
       // Adding geometries
       scene.geometries.add(
               new Sphere(50d, new Point(100, -50, -100)).setEmission(new Color(RED))
@@ -308,6 +311,9 @@ public class ReflectionRefractionTests {
               .writeToImage();
    }
 
+   /**
+    * private function to make a star
+    */
    private Intersectable star(double x, double y, double z, double height, double width) {
       // The vertices for a star
       double reflaction = 0.2;
@@ -347,6 +353,10 @@ public class ReflectionRefractionTests {
       );
    }
 
+   /**
+    * private function to make stars
+    * uses the star function
+    */
    private Geometries createStars() {
       double x = -200;
       double y = 230;
@@ -364,6 +374,10 @@ public class ReflectionRefractionTests {
       return geometries;
    }
 
+   /**
+    * private function to make trees
+    * uses the treeRight function and the treeLeft function
+    */
    private Geometries createTrees() {
       double x = 0;
       double y = -10;
@@ -396,7 +410,9 @@ public class ReflectionRefractionTests {
       return geometries;
    }
 
-
+   /**
+    * private function to make a tree n the right side of the photo
+    */
    private Geometries treeRight(double x, double y, double z, double height) {
       return new Geometries(
               // Tree levels:
@@ -419,6 +435,9 @@ public class ReflectionRefractionTests {
       );
    }
 
+   /**
+    * private function to make a tree n the right left of the photo
+    */
    private Geometries treeLeft(double x, double y, double z, double height) {
       return new Geometries(
               // Tree levels:
@@ -441,7 +460,9 @@ public class ReflectionRefractionTests {
       );
    }
 
-
+   /**
+    * final photo for mini project 1 and 2
+    */
    @Test
    public void starryNight() {
       // Define the geometries for the Christmas tree
